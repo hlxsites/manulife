@@ -1,9 +1,149 @@
-footer {
-  padding: 2rem;
-  background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+.footer {
+  margin-top: 50px !important;
+  font-weight: 400;
+  color: var(--white-color) !important;
+  width: auto; 
+  margin: 0;
+  min-height:56px;
+  background: var(--footer-background-color);
 }
 
+@media (max-width: 768px) {
+  .footer {
+    width: calc(100% +  40px) !important;
+    padding: 0 20px 37px 20px !important;
+    margin-left: -20px !important;
+  }
+}
+@media (min-width: 769px) {
+  .footer {
+    width: calc(100% +  60px) !important;
+    padding: 0 40px 40px 40px !important;
+    margin-left: -30px !important;
+  }
+}
+@media (min-width: 1920px) {
+  .footer {
+    width: calc(100% +  100px) !important;
+    padding: 0 60px 60px 60px !important;
+    margin-left: -50px !important;
+  }
+}
+
+.footer .foot-primary > div > div {
+  float: left;
+  width: 25%;
+}
+
+@media (max-width: 768px) {
+  
+  .footer .foot-primary > div > div {
+    margin-left: 0;
+    width: 100%;
+  }
+
+}
+
+
+.footer .foot-primary > div > div > p {
+  font-size: .625rem;
+  height: 0.625rem;
+  line-height: 1;
+  margin: 40px 0 10px 0;
+}
+
+.footer .foot-primary > div > div > ul li {
+  margin: 5px 0 0 0;
+  padding: 0;
+  line-height: 1.43;
+}
+
+.footer .columns > div > div > ul li a {
+  color: #fff !important;
+  font-weight: 400;
+  font-size: .875rem;
+  line-height: 1.43;
+}
+
+.footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer .foot-social {
+  padding: 15px 0 15px 0;
+  margin: 30px 0 30px 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+
+.footer .foot-social > div > div > ul li {
+  float: left;
+  padding-right: 20px;
+}
+
+.footer .foot-social p {
+  padding: 0;
+  margin: 0;
+}
+
+.footer .foot-social div > a span {
+  display:  none;
+}
+
+.footer .foot-social div > a {
+  width: 40px;
+    height: 40px;
+    margin-right: 11.3px;
+    position: relative;
+    display: inline-block;
+    border: 1px solid #34384b;
+    border-radius: 50%;
+    font-size: 38px;
+    background-size: 38px;
+    font-family: 'manulife-icons' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    color: #fff !important;
+}
+.footer .foot-social div > a:hover {
+  border-color: #fff;
+}
+
+.footer .foot-social div > a:before {
+  display: inline-block;
+}
+
+.footer .foot-social div > a.social-fb:before {
+  content: "\e931";
+}
+
+.footer .foot-social div > a.social-insta:before {
+  content: "\eab5";
+}
+
+.footer .foot-social div > a.social-tw:before {
+  content: "\eab1";
+}
+
+.footer .foot-social div > a.social-yt:before {
+  content: "\eab3";
+}
+
+.footer .foot-disc {
+    line-height: 1.33;
+    height: 1rem;
+    font-size: .75rem;
+    padding: 15px 0 15px 0;
+    width: 64%;
+}
+/*
 footer .footer {
   max-width: 1200px;
   margin: auto;
@@ -11,4 +151,4 @@ footer .footer {
 
 footer .footer p {
   margin: 0;
-}
+}*/
