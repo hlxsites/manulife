@@ -41,7 +41,7 @@ function focusNavSection() {
  * @param {Boolean} expanded Whether the element should be expanded or collapsed
  */
 function toggleAllNavSections(sections, expanded = false) {
-  sections.querySelectorAll('.nav-sections > ul > li').forEach((section) => {
+  sections.querySelectorAll('.nav-tools > ul > li').forEach((section) => {
     section.setAttribute('aria-expanded', expanded);
   });
 }
@@ -85,6 +85,39 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function decorateNavigation(nav) {
+  const navLogo = document.createElement('a');
+  navLogo.id = 'nav-logo';
+  navLogo.className = 'icon';
+  navLogo.href = '/';
+  nav.prepend(navLogo);
+  const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
+  mainLinks.forEach((a) => {
+    const linkText = a.text;
+    if (linkText === '') {
+      a.className = 'hide';
+    } else {
+      const c = linkText.split(' ');
+      const clsName = `icon nav-icon-${c[0].toLowerCase()}`;
+
+      const navIcon = document.createElement('span');
+      navIcon.className = '';
+      navIcon.className = clsName;
+      a.prepend(navIcon);
+    }
+  });
+}
+
+function decorateDOM() {
+  const header = document.querySelector('header');
+  const nav = header.querySelector('.nav-top-left');
+  const body = document.querySelector('body');
+
+  decorateNavigation(nav);
+
+  body.prepend(nav);
+}
+
 /**
  * decorates the header, mainly the nav
  * @param {Element} block The header block element
@@ -103,13 +136,13 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['brand', 'sections', 'tools'];
+    const classes = ['top-left', 'brand', 'tools'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
       if (section) section.classList.add(`nav-${c}`);
     });
 
-    const navSections = nav.querySelector('.nav-sections');
+    const navSections = nav.querySelector('.nav-tools');
     if (navSections) {
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
@@ -141,5 +174,7 @@ export default async function decorate(block) {
     navWrapper.className = 'nav-wrapper';
     navWrapper.append(nav);
     block.append(navWrapper);
+
+    decorateDOM();
   }
 }

@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -14,13 +14,15 @@
   /* colors */
   --link-color: #035fe6;
   --link-hover-color: #136ff6;
-  --background-color: #fff;
+  --background-color: #fafafa;
+  --footer-background-color: #282b3e;
   --overlay-background-color: #eee;
   --highlight-background-color: #ccc;
   --text-color: #000;
+  --white-color: #fff;
 
   /* fonts */
-  --body-font-family: 'helvetica neue', helvetica, ubuntu, roboto, noto, sans-serif;
+  --body-font-family: 'Manulife JH Sans',sans-serif;
   --heading-font-family: var(--body-font-family);
   --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
 
@@ -42,6 +44,79 @@
 
 }
 
+/* Fonts */
+
+/* import common files and component styles */
+
+/* Preferred encoding for web pages */
+
+/* import font from web; still to explore optimal location for font files */
+
+/* Manulife JH Sans */
+@font-face {
+  font-family: 'Manulife JH Sans';
+  src: url('fonts/ManulifeJHSans-Light.eot');
+  src: url('fonts/ManulifeJHSans-Light.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Light.woff2') format('woff2'), url('fonts/ManulifeJHSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manulife JH Sans';
+  src: url('fonts/ManulifeJHSans-Regular.eot');
+  src: url('fonts/ManulifeJHSans-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Regular.woff2') format('woff2'), url('fonts/ManulifeJHSans-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manulife JH Sans';
+  src: url('fonts/ManulifeJHSans-Demibold.eot');
+  src: url('fonts/ManulifeJHSans-Demibold.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Demibold.woff2') format('woff2'), url('fonts/ManulifeJHSans-Demibold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Manulife JH Sans';
+  src: url('fonts/ManulifeJHSans-Bold.eot');
+  src: url('fonts/ManulifeJHSans-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Bold.woff2') format('woff2'), url('fonts/ManulifeJHSans-Bold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Manulife JH Serif */
+@font-face {
+  font-family: 'Manulife JH Serif';
+  src: url('fonts/ManulifeJHSerif-Italic.eot');
+  src: url('fonts/ManulifeJHSerif-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSerif-Italic.woff2') format('woff2'), url('fonts/ManulifeJHSerif-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: manulife-icons;
+  src: url('fonts/icons/manulife-icons.eot?pt8i22');
+  src: url('fonts/icons/manulife-icons.eot?pt8i22#iefix') format('embedded-opentype'), url('fonts/icons/manulife-icons.ttf?pt8i22') format('truetype'), url('fonts/icons/manulife-icons.woff?pt8i22') format('woff'), url('fonts/icons/manulife-icons.svg?pt8i22#manulife-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: static-icons;
+  src: url('fonts/icons/static-icons.eot?r0zl90');
+  src: url('fonts/icons/static-icons.eot?r0zl90#iefix') format('embedded-opentype'), url('fonts/icons/static-icons.ttf?r0zl90') format('truetype'), url('fonts/icons/static-icons.woff?r0zl90') format('woff'), url('fonts/icons/static-icons.svg?r0zl90#static-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
@@ -53,8 +128,28 @@
   }
 }
 
+@media (max-width: 1920px) {
+  html {
+    font-size: var(--body-font-size-xs);
+  }
+}
+
+/* Large Desktop Size */
+@media (min-width: 1921px) {
+  html {
+    font-size: var(--body-font-size-m);
+  }
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+
 body {
-  font-size: var(--body-font-size-m);
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   margin: 0;
   font-family: var(--body-font-family);
   line-height: 1.6;
@@ -127,7 +222,6 @@ a:any-link {
 }
 
 a:hover {
-  text-decoration: underline;
   color: var(--link-hover-color);
 }
 
@@ -209,35 +303,116 @@ main img {
   height: auto;
 }
 
+.hide {
+  display: none !important;
+  visibility: 0 !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
 .icon {
-  display: inline-block;
-  height: 24px;
-  width: 24px;
-}
-
-.icon svg {
-  height: 100%;
-  width: 100%;
-}
-
-main .section {
-  padding: 64px 16px;
-}
-
-@media (min-width: 600px) {
-  main .section {
-    padding: 64px 32px;
-  }
-}
-
-@media (min-width: 900px) {
-  .section > div {
-    max-width: 1200px;
-    margin: auto;
-  }
+  font-family: manulife-icons,sans-serif !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
 }
 
 /* section metadata */
 main .section.highlight {
   background-color: var(--highlight-background-color);
+}
+
+/* Custom styles */
+header, main, footer {
+  width: calc(100% - 80px);
+  margin-left: 80px;
+  transition: transform 500ms ease;
+  padding: 0 30px;
+} 
+
+main {
+  padding: 80px 30px 0;
+}
+
+@media (max-width: 768px) {
+  main, footer {
+    padding: 60px 20px 0;
+    width: 100%;
+    margin: 0 !important;
+  }
+}
+
+/* User Profile section */
+.userprofile {
+  margin-left: -30px !important;
+}
+
+.userprofile .columns-img-col {
+  width: calc(50px + 25%) !important;
+  max-height: 400px;
+  height: 400px;
+  flex: unset;
+  background-color: #202336;
+  float: left;
+}
+
+.userprofile .columns-img-col img {
+  position: relative;
+    left: auto;
+    top: auto;
+    bottom: auto;
+    width: 100%;
+    height: 100%;
+    transform: none;
+    object-fit: cover;
+}
+
+.userprofile .columns-2-cols > div > div ~ div {
+  background-color: #0000c1;
+  padding: 40px;
+  color: #fff;
+  float: left;
+  flex: unset;
+  width: calc(60px + 75%) !important;
+  margin-left: -30px !important;
+  height: 320px;
+}
+
+.userprofile .columns-2-cols > div > div ~ div h2 {
+  font-size: 2rem;
+  line-height: 3.125rem;
+  word-break: break-word;
+  font-weight: 300;
+  color: #fff;
+  max-height: 210px;
+  padding-bottom: 0.5rem;
+  margin: 0 0 20px;
+}
+
+.userprofile .columns-2-cols > div > div ~ div p {
+  word-break: break-word;
+    font-size: 1.125rem;
+    font-weight: 300;
+    line-height: 1.44;
+    color: #fff;
+    max-height: 104px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+  .userprofile .columns-img-col,
+  .userprofile .columns-2-cols > div > div ~ div {
+    width: 100% !important;
+  }
+
+  .userprofile .columns-2-cols > div > div ~ div  {
+    height: auto;
+    padding: 30px 20px;
+    margin: 0 !important;
+  }
 }

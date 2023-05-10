@@ -19,6 +19,25 @@ export default async function decorate(block) {
     const footer = document.createElement('div');
     footer.innerHTML = html;
 
+    const classes = ['primary', 'social', 'disc'];
+    classes.forEach((c, i) => {
+      const section = footer.children[0].children[i];
+      if (section) section.classList.add(`foot-${c}`);
+      if (i === 1) {
+        const socail = ['fb', 'insta', 'tw', 'yt'];
+        socail.forEach((a, b) => {
+          const slink = section.children[0].children[1].children[b];
+          if (slink) {
+            slink.classList.add(`social-${a}`);
+            const sText = document.createElement('span');
+            sText.innerHTML = slink.innerHTML;
+            slink.innerHTML = '';
+            slink.append(sText);
+          }
+        });
+      }
+    });
+
     decorateIcons(footer);
     block.append(footer);
   }
