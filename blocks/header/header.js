@@ -99,21 +99,18 @@ function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
   navLogo.className = 'icon';
-  navLogo.href = "/";
-
+  navLogo.href = '/';
   nav.prepend(navLogo);
-  
-  var mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
-  
-  mainLinks.forEach((a, i) => {
+  const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
+  mainLinks.forEach((a) => {
     var linkText = a.text;
     if (linkText === '') {
       a.className = 'hide';
     } else {
-      var c = linkText.split(' ');
-      var clsName = 'icon nav-icon-' + c[0].toLowerCase();
+      const c = linkText.split(' ');
+      const clsName = 'icon nav-icon-' + c[0].toLowerCase();
 
-      var navIcon = document.createElement('span');
+      const navIcon = document.createElement('span');
       navIcon.className = '';
       navIcon.className = clsName;
       a.prepend(navIcon);

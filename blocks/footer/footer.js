@@ -23,7 +23,7 @@ export default async function decorate(block) {
     classes.forEach((c, i) => {
       const section = footer.children[0].children[i];
       if (section) section.classList.add(`foot-${c}`);
-      if (i == 1) {
+      if (i === 1) {
         const socail = ['fb', 'insta', 'tw', 'yt'];
         socail.forEach((a, b) => {
           const slink = section.children[0].children[1].children[b];
