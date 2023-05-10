@@ -58,6 +58,13 @@ header .nav-wrapper .nav-brand {
   color: #282b3e;
 }
 
+.nav-top-left ul > li a {
+  padding: 20px 0;
+    color: #fff;
+    font-size: .71rem;
+    display: block;
+}
+
 .nav-tools > ul > li:last-child a {
   height: 0;
   min-width: 40px;
@@ -96,12 +103,16 @@ header .nav-wrapper .nav-brand {
   color: #8e90a2;
 }
 
+.nav-top-left ul {
+  list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .nav-tools .icon-search svg,
 .nav-tools > ul > li > ul {
   display: none;
 }
-
-
 
 /* nav hamburger */
 .nav-hamburger {
@@ -151,19 +162,6 @@ nav {
 .nav-top-left ul > li:hover {
   background-color: #282b3e;
     color: #fff;
-}
-
-.nav-top-left ul > li a {
-  padding: 20px 0;
-    color: #fff;
-    font-size: .71rem;
-    display: block;
-}
-
-.nav-top-left ul {
-  list-style: none;
-    margin: 0;
-    padding: 0;
 }
 
 .nav-top-left ul > li > ul {

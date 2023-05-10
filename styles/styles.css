@@ -61,6 +61,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Regular.eot');
@@ -69,6 +70,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Demibold.eot');
@@ -77,6 +79,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Bold.eot');
@@ -85,6 +88,7 @@
   font-style: normal;
   font-display: swap;
 }
+
 /* Manulife JH Serif */
 @font-face {
   font-family: 'Manulife JH Serif';
@@ -327,10 +331,8 @@ main .section.highlight {
 header, main, footer {
   width: calc(100% - 80px);
   margin-left: 80px;
-  -webkit-transition: transform 500ms ease;
-  -o-transition: transform 500ms ease;
   transition: transform 500ms ease;
-  padding: 0px 30px 0;
+  padding: 0 30px 0;
 } 
 
 main {
