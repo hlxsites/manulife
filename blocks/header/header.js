@@ -85,16 +85,6 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function decorateDOM() {
-  const header = document.querySelector('header');
-  const nav = header.querySelector('.nav-top-left');
-  const body = document.querySelector('body');
-
-  decorateNavigation(nav);
-
-  body.prepend(nav);
-}
-
 function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
@@ -103,12 +93,12 @@ function decorateNavigation(nav) {
   nav.prepend(navLogo);
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
   mainLinks.forEach((a) => {
-    var linkText = a.text;
+    const linkText = a.text;
     if (linkText === '') {
       a.className = 'hide';
     } else {
       const c = linkText.split(' ');
-      const clsName = 'icon nav-icon-' + c[0].toLowerCase();
+      const clsName = `icon nav-icon-${c[0].toLowerCase()}`;
 
       const navIcon = document.createElement('span');
       navIcon.className = '';
@@ -116,6 +106,16 @@ function decorateNavigation(nav) {
       a.prepend(navIcon);
     }
   });
+}
+
+function decorateDOM() {
+  const header = document.querySelector('header');
+  const nav = header.querySelector('.nav-top-left');
+  const body = document.querySelector('body');
+
+  decorateNavigation(nav);
+
+  body.prepend(nav);
 }
 
 /**
@@ -136,7 +136,7 @@ export default async function decorate(block) {
     nav.id = 'nav';
     nav.innerHTML = html;
 
-    const classes = ['top-left','brand', 'tools'];
+    const classes = ['top-left', 'brand', 'tools'];
     classes.forEach((c, i) => {
       const section = nav.children[i];
       if (section) section.classList.add(`nav-${c}`);
