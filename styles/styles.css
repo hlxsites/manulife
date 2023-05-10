@@ -1,4 +1,4 @@
-/*
+/* 
  * Copyright 2020 Adobe. All rights reserved.
  * This file is licensed to you under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License. You may obtain a copy
@@ -45,10 +45,13 @@
 }
 
 /* Fonts */
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans+JP:300,400,700|Noto+Sans+KR:300,400,700|Noto+Sans+SC:300,400,700|Noto+Sans+TC:300,400,700&display=swap&subset=chinese-simplified,chinese-traditional,japanese,korean,vietnamese');
+
 /* import common files and component styles */
+
 /* Preferred encoding for web pages */
+
 /* import font from web; still to explore optimal location for font files */
+
 /* Manulife JH Sans */
 @font-face {
   font-family: 'Manulife JH Sans';
@@ -93,7 +96,7 @@
 }
 
 @font-face {
-  font-family: 'manulife-icons';
+  font-family: manulife-icons;
   src: url('fonts/icons/manulife-icons.eot?pt8i22');
   src: url('fonts/icons/manulife-icons.eot?pt8i22#iefix') format('embedded-opentype'), url('fonts/icons/manulife-icons.ttf?pt8i22') format('truetype'), url('fonts/icons/manulife-icons.woff?pt8i22') format('woff'), url('fonts/icons/manulife-icons.svg?pt8i22#manulife-icons') format('svg');
   font-weight: normal;
@@ -102,7 +105,7 @@
 }
 
 @font-face {
-  font-family: 'static-icons';
+  font-family: static-icons;
   src: url('fonts/icons/static-icons.eot?r0zl90');
   src: url('fonts/icons/static-icons.eot?r0zl90#iefix') format('embedded-opentype'), url('fonts/icons/static-icons.ttf?r0zl90') format('truetype'), url('fonts/icons/static-icons.woff?r0zl90') format('woff'), url('fonts/icons/static-icons.svg?r0zl90#static-icons') format('svg');
   font-weight: normal;
@@ -126,6 +129,7 @@
     font-size: var(--body-font-size-xs);
   }
 }
+
 /* Large Desktop Size */
 @media (min-width: 1921px) {
   html {
@@ -295,7 +299,6 @@ main img {
   height: auto;
 }
 
-
 .hide {
   display: none !important;
   visibility: 0 !important;
@@ -306,15 +309,13 @@ main img {
 }
 
 .icon {
-  font-family: 'manulife-icons' !important;
+  font-family: manulife-icons,sans-serif !important;
     speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
     text-transform: none;
     line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 /* section metadata */
@@ -367,7 +368,6 @@ main {
     height: 100%;
     transform: none;
     object-fit: cover;
-    font-family: 'object-fit: cover;';
 }
 
 .userprofile .columns-2-cols > div > div ~ div {
