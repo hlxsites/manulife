@@ -9,7 +9,7 @@
 
 @media (max-width: 768px) {
   .footer {
-    width: calc(100% + 40px) !important;
+    /* width: calc(100% + 40px) !important; */
     padding: 0 20px 37px !important;
     margin-left: -20px !important;
   }
@@ -17,7 +17,7 @@
 
 @media (min-width: 769px) {
   .footer {
-    width: calc(100% + 60px) !important;
+    /* width: calc(100% + 60px) !important; */
     padding: 0 40px 40px !important;
     margin-left: -30px !important;
   }
@@ -96,7 +96,7 @@
 }
 
 .footer .foot-social {
-  padding: 15px 0;
+  padding: 30px 0 20px;
   margin: 30px 0;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
