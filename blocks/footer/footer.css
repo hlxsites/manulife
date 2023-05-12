@@ -88,6 +88,11 @@
   line-height: 1.43;
 }
 
+.footer .columns > div > div > ul li a:hover {
+  text-decoration: none !important;
+  border-bottom: 1px solid #fff;
+}
+
 .footer ul {
   margin: 0;
   padding: 0;

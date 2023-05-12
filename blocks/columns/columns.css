@@ -19,7 +19,7 @@
   display: block;
 }
 
-@media (min-width: 900px) {
+@media (min-width: 768px) {
   .columns > div {
     flex-direction: unset;
     gap: 32px;
