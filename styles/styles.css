@@ -193,6 +193,11 @@ h2 {
   line-height: 2.625rem;
 }
 
+p, dl, ol, ul, pre, blockquote {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
 blockquote + blockquote,
 blockquote + h2,
 h2 + blockquote,
@@ -219,11 +224,6 @@ h5 {
 h6 {
   font-size: 1rem;
   line-height: 1.625rem;
-}
-
-p, dl, ol, ul, pre, blockquote {
-  margin-top: 1em;
-  margin-bottom: 1em;
 }
 
 /* Phone Size */
