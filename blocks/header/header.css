@@ -199,6 +199,16 @@ header .nav-wrapper .nav-brand {
 
 .nav-mob {
   display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  background-color: #34384b;
+  min-width: 320px;
+  z-index: 1005;
+  flex-wrap: wrap;
+  overflow: hidden;
 }
 
 /* Mobile Header and Nav */
@@ -270,19 +280,6 @@ header .nav-wrapper .nav-brand {
   }
 }
 
-.nav-mob {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: #34384b;
-  min-width: 320px;
-  z-index: 1005;
-  flex-wrap: wrap;
-  overflow: hidden;
-}
-
 #mob-nav-logo {
   font-size: 30px;
   color: #fff;
@@ -307,14 +304,14 @@ header .nav-wrapper .nav-brand {
   margin-left: 20px;
 }
 
-.nav_mob_tools {
+.nav-mob-tools {
   display: flex;
   position: absolute;
   top: 0;
   right: 0;
 }
 
-.nav_mob_user {
+.nav-mob-user {
   width: 60px;
   height: 60px;
   border-left: solid 1px #282b3e;

@@ -111,12 +111,12 @@ function mobileNav(header) {
   mobNav.append(manuLifeLogo);
 
   const toolContainer = document.createElement('div');
-  toolContainer.className = 'nav_mob_tools';
+  toolContainer.className = 'nav-mob-tools';
 
   const signIn = header.querySelector('.nav-tools > ul > li:last-child > a');
   const signInLink = document.createElement('a');
   signInLink.href = signIn.href;
-  signInLink.className = 'icon nav_mob_user';
+  signInLink.className = 'icon nav-mob-user';
   const signInImg = document.createElement('img');
   signInImg.src = '/styles/icons/icon-user.svg';
   signInLink.append(signInImg);
