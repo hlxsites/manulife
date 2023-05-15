@@ -85,7 +85,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function mobileNavClick() {
+function mobileNavClick(e) {
+  e.preventDefault();
   const body = document.querySelector('body');
   if (body.classList.contains('is-open-menu')) {
     body.classList.remove('is-open-menu');
@@ -131,8 +132,8 @@ function mobileNav(header) {
   const mobMenu = document.createElement('a');
   mobMenu.className = 'icon nav-mob-menu';
   mobMenu.setAttribute('aria-label', 'Menu');
-  mobMenu.href = 'javascript:void(0)';
-  mobMenu.addEventListener('click', () => mobileNavClick());
+  mobMenu.href = 'about:blank';
+  mobMenu.addEventListener('click', (e) => mobileNavClick(e));
   const mobMenuSpan = document.createElement('span');
   mobMenu.append(mobMenuSpan);
   toolContainer.append(mobMenu);
