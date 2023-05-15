@@ -29,6 +29,7 @@ export default async function decorate(block) {
           const slink = section.children[0].children[1].children[b];
           if (slink) {
             slink.classList.add(`social-${a}`);
+            slink.setAttribute('aria-label', slink.innerHTML);
             const sText = document.createElement('span');
             sText.innerHTML = slink.innerHTML;
             slink.innerHTML = '';
