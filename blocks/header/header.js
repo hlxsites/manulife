@@ -87,19 +87,16 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
 
 function mobileNavClick() {
   const body = document.querySelector('body');
-  let isMenu = false;
-  if (body.classList.contains('isOpenMenu')) {
-    body.classList.remove('isOpenMenu');
-    isMenu = true;
+  if (body.classList.contains('is-open-menu')) {
+    body.classList.remove('is-open-menu');
   } else {
-    body.classList.add('isOpenMenu');
+    body.classList.add('is-open-menu');
   }
-  console.log(isMenu, body.classList);
 }
 
 function mobileNav(header) {
   const mobNav = document.createElement('div');
-  mobNav.id = 'nav_mob';
+  mobNav.className = 'nav-mob';
 
   const mobLogo = document.createElement('a');
   mobLogo.id = 'mob-nav-logo';
@@ -126,7 +123,7 @@ function mobileNav(header) {
   toolContainer.append(signInLink);
 
   const mobMenu = document.createElement('a');
-  mobMenu.className = 'icon nav_mob_menu';
+  mobMenu.className = 'icon nav-mob-menu';
   mobMenu.addEventListener('click', () => mobileNavClick());
   const mobMenuSpan = document.createElement('span');
   mobMenu.append(mobMenuSpan);

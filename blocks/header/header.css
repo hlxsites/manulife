@@ -197,7 +197,7 @@ header .nav-wrapper .nav-brand {
   content: "\e90f";
 }
 
-#nav_mob {
+.nav-mob {
   display: none;
 }
 
@@ -211,15 +211,15 @@ header .nav-wrapper .nav-brand {
     display: none;
   }
 
-  #nav_mob {
+  .nav-mob {
     display: flex;
   }
 
-  .isOpenMenu {
+  .is-open-menu {
     overflow: hidden;
   }
 
-  .isOpenMenu .nav-top-left {
+  .is-open-menu .nav-top-left {
     transform: translate3d(0,0,0);
     visibility: visible;
     transition: transform 1000ms ease,visibility 1000ms linear;
@@ -270,7 +270,7 @@ header .nav-wrapper .nav-brand {
   }
 }
 
-#nav_mob {
+.nav-mob {
   position: fixed;
   top: 0;
   left: 0;
@@ -289,9 +289,7 @@ header .nav-wrapper .nav-brand {
   height: 60px;
   width: 60px;
   align-items: center;
-  justify-content: center;
   background-color: #00a758;
-  align-items: center;
   justify-content: center;
   display: flex;
 }
@@ -303,7 +301,7 @@ header .nav-wrapper .nav-brand {
 #nav-logo-manulife {
   height: 19px;
   color: transparent;
-  background: url(/styles/icons/Manulife-logo-mobile.svg) no-repeat;
+  background: url('/styles/icons/Manulife-logo-mobile.svg') no-repeat;
   width: 122px;
   margin-top: 20px;
   margin-left: 20px;
@@ -328,7 +326,7 @@ header .nav-wrapper .nav-brand {
   text-align: center;
 }
 
-.nav_mob_menu {
+.nav-mob-menu {
   width: 19px;
   height: 19px;
   border-left: solid 1px #282b3e;
@@ -338,7 +336,7 @@ header .nav-wrapper .nav-brand {
   cursor: pointer;
 }
 
-.nav_mob_menu span {
+.nav-mob-menu span {
   position: relative;
   display: block;
   height: 2px;
@@ -348,8 +346,8 @@ header .nav-wrapper .nav-brand {
   top: 9px;
 }
 
-.nav_mob_menu span::before,
-.nav_mob_menu span::after {
+.nav-mob-menu span::before,
+.nav-mob-menu span::after {
   content: "";
   position: absolute;
   top: 7px;
@@ -361,27 +359,23 @@ header .nav-wrapper .nav-brand {
   transition: top 500ms ease 500ms,transform 500ms ease;
 }
 
-.nav_mob_menu span::before {
+.nav-mob-menu span::before {
   top: -7px;
   transform: none;
 }
 
-.isOpenMenu .nav_mob_menu {
+.is-open-menu .nav-mob-menu {
   background-color: #1a1c28;
 }
 
-.isOpenMenu .nav_mob_menu span {
+.is-open-menu .nav-mob-menu span {
   transform: rotate(-45deg);
-    -webkit-transition: transform 500ms ease 500ms;
-    -o-transition: transform 500ms ease 500ms;
     transition: transform 500ms ease 500ms;
 }
 
-.isOpenMenu .nav_mob_menu span::before,
-.isOpenMenu .nav_mob_menu span::after {
-  top: 0px;
+.is-open-menu .nav-mob-menu span::before,
+.is-open-menu .nav-mob-menu span::after {
+  top: 0;
   transform: rotate(90deg);
-  -webkit-transition: top 500ms ease, transform 500ms ease 500ms;
-  -o-transition: top 500ms ease, transform 500ms ease 500ms;
   transition: top 500ms ease, transform 500ms ease 500ms;
 }

@@ -88,6 +88,10 @@
   line-height: 1.43;
 }
 
+.footer .foot-social div > a:hover {
+  border-color: #fff;
+}
+
 .footer .columns > div > div > ul li a:hover {
   text-decoration: none !important;
   border-bottom: 1px solid #fff;
@@ -113,10 +117,6 @@
 
 .footer .foot-social div > a span {
   display:  none;
-}
-
-.footer .foot-social div > a:hover {
-  border-color: #fff;
 }
 
 .footer .foot-social div > a::before {
