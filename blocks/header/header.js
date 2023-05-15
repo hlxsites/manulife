@@ -147,6 +147,7 @@ function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
   navLogo.className = 'icon';
+  navLogo.setAttribute('aria-label', 'Home');
   navLogo.href = '/';
   nav.prepend(navLogo);
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');

@@ -105,9 +105,13 @@
 
 .footer .foot-social {
   padding: 30px 0 20px;
-  margin: 30px 0;
+  margin: 30px -40px;
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
+}
+
+.footer .foot-social > div {
+  margin: 0 40px;
 }
 
 .footer .foot-social > div > div > ul li {
@@ -144,7 +148,7 @@
     height: 1rem;
     font-size: .75rem;
     padding: 15px 0;
-    width: 64%;
+    width: 70%;
 }
 
 @media (max-width: 768px) {
