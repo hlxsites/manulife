@@ -147,6 +147,17 @@
     width: 64%;
 }
 
+@media (max-width: 768px) {
+  .footer a {
+    font-size: .875rem;
+    line-height: 2.86;
+  }
+
+  .foot-social > div > div {
+    margin: 20px 0;
+  }
+}
+
 /*
 footer .footer {
   max-width: 1200px;

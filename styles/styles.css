@@ -297,6 +297,8 @@ main pre {
 
 a:any-link {
   text-decoration: none;
+  letter-spacing: .3px;
+  word-break: break-word;
 }
 
 a:hover {
