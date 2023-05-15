@@ -166,26 +166,105 @@ header {
   height: var(--nav-height);
 }
 
-h1, h2, h3,
-h4, h5, h6 {
-  font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
-  margin-top: 1em;
-  margin-bottom: .5em;
-  scroll-margin: calc(var(--nav-height) + 1em);
+i, em,
+b, strong {
+  font-family: 'Manulife JH Serif',serif;
 }
 
-h1 { font-size: var(--heading-font-size-xxl) }
-h2 { font-size: var(--heading-font-size-xl) }
-h3 { font-size: var(--heading-font-size-l) }
-h4 { font-size: var(--heading-font-size-m) }
-h5 { font-size: var(--heading-font-size-s) }
-h6 { font-size: var(--heading-font-size-xs) }
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  word-wrap: break-word;
+  line-height: 1;
+  font-weight: 300;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 3.625rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 2.625rem;
+}
 
 p, dl, ol, ul, pre, blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
+}
+
+blockquote + blockquote,
+blockquote + h2,
+h2 + blockquote,
+h2 + h2 {
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-size: 1.625rem;
+  line-height: 2.25rem;
+}
+
+h4 {
+  font-size: 1.375rem;
+  line-height: 2rem;
+}
+
+h5 {
+  font-size: 1.125rem;
+  line-height: 1.625rem;
+}
+
+h6 {
+  font-size: 1rem;
+  line-height: 1.625rem;
+}
+
+/* Phone Size */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.25rem;
+    line-height: 2.625rem;
+  }
+
+  h2 {
+    font-size: 1.625rem;
+    line-height: 2rem;
+  }
+
+  blockquote + blockquote,
+  blockquote + h2,
+  h2 + blockquote,
+  h2 + h2 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+
+  h3 {
+    font-size: 1.375rem;
+    line-height: 2rem;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+
+  h5 {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+
+  h6 {
+    font-size: 1rem;
+    line-height: 1.625rem;
+  }
 }
 
 hr {
@@ -217,7 +296,6 @@ main pre {
 }
 
 a:any-link {
-  color: var(--link-color);
   text-decoration: none;
 }
 
@@ -314,7 +392,6 @@ main img {
 
 .icon {
   font-family: manulife-icons,sans-serif !important;
-    speak: none;
     font-style: normal;
     font-weight: normal;
     font-variant: normal;
@@ -329,14 +406,14 @@ main .section.highlight {
 
 /* Custom styles */
 header, main, footer {
-  width: calc(100% - 80px);
+  /* width: calc(100% - 80px); */
   margin-left: 80px;
   transition: transform 500ms ease;
-  padding: 0 30px;
+  padding: 0 0 0 30px;
 } 
 
 main {
-  padding: 80px 30px 0;
+  padding: 80px 0 0 30px;
 }
 
 @media (max-width: 768px) {
@@ -350,6 +427,7 @@ main {
 /* User Profile section */
 .userprofile {
   margin-left: -30px !important;
+  padding: 0 !important;
 }
 
 .userprofile .columns-img-col {
@@ -372,6 +450,11 @@ main {
     object-fit: cover;
 }
 
+.aboutme .columns > div > div,
+.followme .columns > div > div {
+  padding-right: 75px;
+}
+
 .userprofile .columns-2-cols > div > div ~ div {
   background-color: #0000c1;
   padding: 40px;
@@ -383,6 +466,11 @@ main {
   height: 320px;
 }
 
+.aboutme h2,
+.followme h2 {
+  padding-left: 10px;
+}
+
 .userprofile .columns-2-cols > div > div ~ div h2 {
   font-size: 2rem;
   line-height: 3.125rem;
@@ -392,6 +480,17 @@ main {
   max-height: 210px;
   padding-bottom: 0.5rem;
   margin: 0 0 20px;
+}
+
+.aboutme p,
+.aboutme ul,
+.aboutme ul li {
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.43;
+  color: #282b3e;
+  word-break: break-word;
+  padding: 0;
 }
 
 .userprofile .columns-2-cols > div > div ~ div p {
@@ -415,4 +514,118 @@ main {
     padding: 30px 20px;
     margin: 0 !important;
   }
+}
+
+/* About-me & Follow-me section */
+.section {
+  padding: 50px 0;
+}
+
+.aboutme h3,
+.followme h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.63;
+  color: #282b3e;
+  max-height: 52px;
+  overflow: hidden;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.aboutme ul {
+  list-style: none;
+}
+
+.aboutme .columns > div > div:first-child,
+.followme .columns > div > div:first-child {
+  width: 23%;
+  flex: unset;
+  padding-right: 0;
+}
+
+.aboutme .icon-userlogin,
+.aboutme .icon-award {
+  height: 80px;
+  display: block;
+  font-size: 80px;
+  color: #202336;
+}
+
+.aboutme .icon-userlogin::before {
+  content: "\e927";
+}
+
+.aboutme .icon-award::before {
+  content: "\e9ba";
+}
+
+.aboutme .icon svg,
+.followme .icon svg {
+  display: none;
+}
+
+.followme .icon {
+  font-size: 50px;
+  height: 50px;
+}
+
+.followme .icon-facebook::before {
+  content: "\e931";
+}
+
+.followme .icon-instagram::before {
+  content: "\eab5";
+}
+
+.followme .button-container {
+  color: #282b3e;
+  display: inline-block;
+  font-size: .875rem;
+  font-weight: 600;
+}
+
+.followme .button-container a {
+  margin: 0;
+  padding: 5px 0 5px 35px;
+  font-weight: normal;
+  line-height: 1.43;
+  display: inline-block;
+  font-size: .875rem;
+  color: #282b3e !important;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  letter-spacing: normal;
+  background: none;
+  position: relative;
+}
+
+.followme .button-container a::before {
+  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  content: "\e933";
+  color: #ec6453;
+  font-size: 20px;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  top: -1px;
+}
+
+.followme .button-container a:hover::before {
+  font-size: 23px;
+}
+
+/* Contact form block */
+.section.contactform {
+  padding: 0;
+}
+
+.contactform h3 {
+  margin: 0;
+  padding-top: 10px;
+  font-weight: 600;
+  font-size: 1.375rem;
+  line-height: 2rem;
 }

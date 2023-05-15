@@ -85,6 +85,55 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
+function mobileNavClick() {
+  const body = document.querySelector('body');
+  if (body.classList.contains('is-open-menu')) {
+    body.classList.remove('is-open-menu');
+  } else {
+    body.classList.add('is-open-menu');
+  }
+}
+
+function mobileNav(header) {
+  const mobNav = document.createElement('div');
+  mobNav.className = 'nav-mob';
+
+  const mobLogo = document.createElement('a');
+  mobLogo.id = 'mob-nav-logo';
+  mobLogo.className = 'icon';
+  mobLogo.href = '/';
+  mobNav.append(mobLogo);
+
+  const manuLifeLogo = document.createElement('a');
+  manuLifeLogo.id = 'nav-logo-manulife';
+  manuLifeLogo.className = 'icon';
+  manuLifeLogo.href = '/';
+  mobNav.append(manuLifeLogo);
+
+  const toolContainer = document.createElement('div');
+  toolContainer.className = 'nav-mob-tools';
+
+  const signIn = header.querySelector('.nav-tools > ul > li:last-child > a');
+  const signInLink = document.createElement('a');
+  signInLink.href = signIn.href;
+  signInLink.className = 'icon nav-mob-user';
+  const signInImg = document.createElement('img');
+  signInImg.src = '/styles/icons/icon-user.svg';
+  signInLink.append(signInImg);
+  toolContainer.append(signInLink);
+
+  const mobMenu = document.createElement('a');
+  mobMenu.className = 'icon nav-mob-menu';
+  mobMenu.addEventListener('click', () => mobileNavClick());
+  const mobMenuSpan = document.createElement('span');
+  mobMenu.append(mobMenuSpan);
+  toolContainer.append(mobMenu);
+
+  mobNav.append(toolContainer);
+
+  return mobNav;
+}
+
 function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
@@ -113,9 +162,11 @@ function decorateDOM() {
   const nav = header.querySelector('.nav-top-left');
   const body = document.querySelector('body');
 
+  const mobNav = mobileNav(header);
   decorateNavigation(nav);
 
   body.prepend(nav);
+  body.append(mobNav);
 }
 
 /**
