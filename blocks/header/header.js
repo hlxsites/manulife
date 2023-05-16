@@ -85,7 +85,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function mobileNavClick() {
+function mobileNavClick(e) {
+  e.preventDefault();
   const body = document.querySelector('body');
   if (body.classList.contains('is-open-menu')) {
     body.classList.remove('is-open-menu');
@@ -101,12 +102,14 @@ function mobileNav(header) {
   const mobLogo = document.createElement('a');
   mobLogo.id = 'mob-nav-logo';
   mobLogo.className = 'icon';
+  mobLogo.setAttribute('aria-label', 'Home');
   mobLogo.href = '/';
   mobNav.append(mobLogo);
 
   const manuLifeLogo = document.createElement('a');
   manuLifeLogo.id = 'nav-logo-manulife';
   manuLifeLogo.className = 'icon';
+  manuLifeLogo.setAttribute('aria-label', 'Manulife');
   manuLifeLogo.href = '/';
   mobNav.append(manuLifeLogo);
 
@@ -117,14 +120,20 @@ function mobileNav(header) {
   const signInLink = document.createElement('a');
   signInLink.href = signIn.href;
   signInLink.className = 'icon nav-mob-user';
+  signInLink.setAttribute('aria-label', 'User Signin');
   const signInImg = document.createElement('img');
   signInImg.src = '/styles/icons/icon-user.svg';
+  signInImg.width = 20;
+  signInImg.height = 20;
+  signInImg.alt = 'User Signin';
   signInLink.append(signInImg);
   toolContainer.append(signInLink);
 
   const mobMenu = document.createElement('a');
   mobMenu.className = 'icon nav-mob-menu';
-  mobMenu.addEventListener('click', () => mobileNavClick());
+  mobMenu.setAttribute('aria-label', 'Menu');
+  mobMenu.href = 'about:blank';
+  mobMenu.addEventListener('click', (e) => mobileNavClick(e));
   const mobMenuSpan = document.createElement('span');
   mobMenu.append(mobMenuSpan);
   toolContainer.append(mobMenu);
@@ -138,6 +147,7 @@ function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
   navLogo.className = 'icon';
+  navLogo.setAttribute('aria-label', 'Home');
   navLogo.href = '/';
   nav.prepend(navLogo);
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
