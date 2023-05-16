@@ -146,6 +146,10 @@ html {
   box-sizing: border-box;
 }
 
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
 body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
@@ -155,11 +159,9 @@ body {
   line-height: 1.6;
   color: var(--text-color);
   background-color: var(--background-color);
-  display: none;
-}
-
-body.appear {
-  display: unset;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -297,6 +299,8 @@ main pre {
 
 a:any-link {
   text-decoration: none;
+  letter-spacing: -0.05px;
+  word-break: break-word;
 }
 
 a:hover {
@@ -418,36 +422,42 @@ main {
 
 @media (max-width: 768px) {
   main, footer {
-    padding: 60px 20px 0;
     width: 100%;
-    margin: 0 !important;
+    margin: 0;
+  }
+
+  main {
+    padding: 60px 20px 0;
+  }
+
+  footer {
+    padding: 60px 0 0 20px;
   }
 }
 
 /* User Profile section */
-.userprofile {
-  margin-left: -30px !important;
-  padding: 0 !important;
+.section.userprofile {
+  margin: 0 -30px;
+  padding: 0;
 }
 
 .userprofile .columns-img-col {
-  width: calc(50px + 25%) !important;
-  max-height: 400px;
   height: 400px;
   flex: unset;
   background-color: #202336;
   float: left;
+  width: 436px;
 }
 
 .userprofile .columns-img-col img {
   position: relative;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    width: 100%;
-    height: 100%;
-    transform: none;
-    object-fit: cover;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  object-fit: cover;
 }
 
 .aboutme .columns > div > div,
@@ -462,8 +472,8 @@ main {
   float: left;
   flex: unset;
   width: calc(60px + 75%) !important;
-  margin-left: -30px !important;
-  height: 320px;
+  margin-left: -31px !important;
+  height: 400px;
 }
 
 .aboutme h2,
@@ -504,6 +514,11 @@ main {
 }
 
 @media (max-width: 768px) {
+  .aboutme .columns > div > div,
+  .followme .columns > div > div {
+    padding: 0;
+  }
+
   .userprofile .columns-img-col,
   .userprofile .columns-2-cols > div > div ~ div {
     width: 100% !important;
@@ -511,7 +526,7 @@ main {
 
   .userprofile .columns-2-cols > div > div ~ div  {
     height: auto;
-    padding: 30px 20px;
+    padding: 30px !important;
     margin: 0 !important;
   }
 }
@@ -628,4 +643,11 @@ main {
   font-weight: 600;
   font-size: 1.375rem;
   line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contactform h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
