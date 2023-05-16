@@ -1,0 +1,134 @@
+.section.tiles-container {
+  padding: 0;
+}
+
+.tiles-wrapper {
+  clear: both;
+  display: block;
+  min-height: 400px;
+}
+
+.tiles-main {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  display: block;
+}
+
+.tile {
+  padding: 0 10px;
+  margin: 10px 0;
+  float: left;
+  position: relative;
+}
+
+.tile-container {
+  width: 270px;
+  height: 380px;
+  transition: all .25s;
+  position: relative;
+}
+
+.tile:hover .tile-container {
+    cursor: auto;
+    margin-top: -15px;
+    margin-bottom: 15px;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.tile:hover .tile-image {
+    margin-top: -15px;
+    -moz-transition: all 0.25s;
+    -webkit-transition: all 0.25s;
+    -o-transition: all 0.25s;
+    transition: all .25s;
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0) !important;
+}
+
+.tile a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tile-image {
+    width: 100%;
+    height: 100%;
+}
+
+.tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tile-body {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tile-body .tile-body-wrapper {
+    padding: 0 20px 20px 0;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: normal;
+    overflow: hidden;
+    word-break: break-word;
+    max-height: 158px;
+    line-height: 30px;
+}
+
+.tile-body .tile-body-wrapper p:last-child {
+    bottom: 0;
+    top: auto;
+    position: absolute;
+}
+
+.tile-body-wrapper .icon {
+    font-size: 80px;
+    display: block;
+    bottom: 210px;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+  .tile-container {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Tiles colors */
+.tile-bg-orange .tile-container {
+  background-color: orange;
+}
+
+.tile-bg-green .tile-container {
+    background-color: green;
+}
+
+.tile-bg-red .tile-container {
+    background-color: red;
+}
+
+.tile-bg-blue .tile-container {
+    background-color: blue;
+}
+
+.tile-bg-jade .tile-container {
+    background-color: #00a758;
+}
+
+.tile-bg-cyan .tile-container {
+    background-color: #07857d;
+}

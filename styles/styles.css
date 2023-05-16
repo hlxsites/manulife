@@ -17,7 +17,6 @@
   --background-color: #fafafa;
   --footer-background-color: #282b3e;
   --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
   --text-color: #000;
   --white-color: #fff;
 
@@ -307,76 +306,48 @@ a:hover {
   color: var(--link-hover-color);
 }
 
-/* buttons */
-a.button:any-link, button {
-  font-family: var(--body-font-family);
+.button-container {
+  color: #282b3e;
   display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
-  font-style: normal;
+  font-size: .875rem;
   font-weight: 600;
+}
+
+.button-container em {
+  font-style: normal;
+  font-family: var(--body-font-family);
+}
+
+.button-container a.secondary {
+  margin: 0;
+  padding: 5px 0 5px 35px;
+  font-weight: normal;
+  line-height: 1.43;
+  display: inline-block;
+  font-size: .875rem;
+  color: #282b3e !important;
+  text-decoration: none;
+  border: 0;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
+  letter-spacing: normal;
+  background: none;
+  position: relative;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+.button-container a.secondary::before {
+  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  content: "\e933";
+  color: #ec6453;
+  font-size: 20px;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  top: -1px;
 }
 
-button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
-}
-
-main input {
-  font-size: 1.25rem;
-  width: 100%;
-  max-width: 50rem;
-  display: block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-main input:hover {
-  border: 1px solid var(--text-color);
-}
-
-main blockquote {
-  font-style: italic;
-  margin: 3rem;
-  text-indent: -1rem;
-  hanging-punctuation: first;
-}
-
-main blockquote p::before {
-  content: "“";
-  line-height: 0;
-}
-
-main blockquote p::after {
-  content: "”";
-  line-height: 0;
+.button-container a.secondary:hover::before {
+  font-size: 23px;
 }
 
 main img {
@@ -403,9 +374,28 @@ main img {
     line-height: 1;
 }
 
-/* section metadata */
-main .section.highlight {
-  background-color: var(--highlight-background-color);
+/* Custom columns */
+.col-1by4 {
+  display: flex;
+}
+
+.col-1by4 > div {
+  width: 25%;
+}
+
+.col-1by4 > div:last-child {
+  width: 75%;
+}
+
+@media (max-width: 900px) {
+  .col-1by4 {
+    display: block;
+  }
+
+  .col-1by4 > div,
+  .col-1by4 > div:last-child {
+    width: 100%;
+  }
 }
 
 /* Custom styles */
@@ -534,6 +524,7 @@ main {
 /* About-me & Follow-me section */
 .section {
   padding: 50px 0;
+  clear: both;
 }
 
 .aboutme h3,
@@ -567,16 +558,23 @@ main {
   color: #202336;
 }
 
-.aboutme .icon-userlogin::before {
+.icon-userlogin::before {
   content: "\e927";
 }
 
-.aboutme .icon-award::before {
+.icon-award::before {
   content: "\e9ba";
 }
 
-.aboutme .icon svg,
-.followme .icon svg {
+.icon-officebuilding::before {
+  content: "\ea4a";
+}
+
+.icon-advisor::before {
+  content: "\e905";
+}
+
+.icon svg {
   display: none;
 }
 
@@ -591,45 +589,6 @@ main {
 
 .followme .icon-instagram::before {
   content: "\eab5";
-}
-
-.followme .button-container {
-  color: #282b3e;
-  display: inline-block;
-  font-size: .875rem;
-  font-weight: 600;
-}
-
-.followme .button-container a {
-  margin: 0;
-  padding: 5px 0 5px 35px;
-  font-weight: normal;
-  line-height: 1.43;
-  display: inline-block;
-  font-size: .875rem;
-  color: #282b3e !important;
-  text-decoration: none;
-  border: 0;
-  cursor: pointer;
-  letter-spacing: normal;
-  background: none;
-  position: relative;
-}
-
-.followme .button-container a::before {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
-  content: "\e933";
-  color: #ec6453;
-  font-size: 20px;
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  left: 0;
-  top: -1px;
-}
-
-.followme .button-container a:hover::before {
-  font-size: 23px;
 }
 
 /* Contact form block */
