@@ -533,6 +533,11 @@ main {
   padding: 0;
 }
 
+.facebook-chat .tile-body-wrapper p {
+  margin: 0;
+  display: contents;
+}
+
 .userprofile .columns-2-cols > div > div ~ div p {
   word-break: break-word;
     font-size: 1.125rem;
@@ -662,11 +667,6 @@ main {
   position: relative;
   bottom: auto;
   float: left;
-}
-
-.facebook-chat .tile-body-wrapper p {
-  margin: 0;
-  display: contents;
 }
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child {
