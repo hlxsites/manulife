@@ -432,8 +432,8 @@ main img {
   }
 
   .col-1by4 > div,
-  .col-1by4 > div:last-child,
-  .col-1by2 > div {
+  .col-1by2 > div,
+  .col-1by4 > div:last-child {
     width: 100%;
   }
 }
@@ -686,7 +686,7 @@ main {
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
   position: relative;
-  font-family: Manulife JH Sans,'static-icons' !important;
+  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
