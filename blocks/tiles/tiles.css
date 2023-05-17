@@ -100,36 +100,57 @@
 /* Tiles colors */
 .tile-bg-orange .tile-container {
   background-color: orange;
+}
+
+.tile-bg-orange .tile-container a {
   color: #000;
 }
 
 .tile-bg-green .tile-container {
     background-color: green;
-    color: #fff;
+}
+
+.tile-bg-green .tile-container a {
+  color: #fff;
 }
 
 .tile-bg-red .tile-container {
     background-color: red;
-    color: #000;
+}
+
+.tile-bg-red .tile-container a {
+  color: #000;
 }
 
 .tile-bg-blue .tile-container {
     background-color: blue;
-    color: #fff;
+}
+
+.tile-bg-blue .tile-container a {
+  color: #fff;
 }
 
 .tile-bg-jade .tile-container {
     background-color: #00a758;
-    color: #000;
+}
+
+.tile-bg-jade .tile-container a {
+  color: #000;
 }
 
 .tile-bg-cyan .tile-container {
     background-color: #07857d;
-    color: #000;
+}
+
+.tile-bg-cyan .tile-container a {
+  color: #000;
 }
 
 .tile-bg-white .tile-container {
   background-color: #fff;
+}
+
+.tile-bg-white .tile-container a {
   color: #000;
 }
 
