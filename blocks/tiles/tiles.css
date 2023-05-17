@@ -20,11 +20,15 @@
 }
 
 .tile {
-  width: 24%;
+  width: 25%;
   padding: 0 10px;
   margin: 10px 0;
   float: left;
   position: relative;
+}
+
+.col-1by2 .tile {
+  width: 100%;
 }
 
 .tile-container {
@@ -150,7 +154,8 @@
   background-color: #fff;
 }
 
-.tile-bg-white .tile-container a {
+.tile-bg-white .tile-container a,
+.tile-bg-white .tile-body .tile-body-wrapper {
   color: #000;
 }
 
@@ -164,5 +169,16 @@
 .tile:hover .tile-image {
   margin-top: -15px;
   transition: all .25s;
-  box-shadow: 0 12px 16px #0003 !important;
+  box-shadow: 0 12px 16px #0003;
+}
+
+.no-effect .tile:hover .tile-container {
+  margin: 0;
+  box-shadow: none;
+}
+
+.no-effect .tile:hover .tile-image {
+  margin: 0;
+  transition: none;
+  box-shadow: none;
 }

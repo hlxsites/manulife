@@ -46,3 +46,6 @@ Following icons are currently supported
 | award           |
 | officebuilding  |
 | advisor         |
+| chat            |
+| facebook        |
+| instagram       |

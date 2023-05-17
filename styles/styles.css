@@ -365,6 +365,7 @@ main img {
   width: 0 !important;
 }
 
+/* Icons */
 .icon {
   font-family: manulife-icons,sans-serif !important;
     font-style: normal;
@@ -374,9 +375,46 @@ main img {
     line-height: 1;
 }
 
+.icon-userlogin::before {
+  content: "\e927";
+}
+
+.icon-award::before {
+  content: "\e9ba";
+}
+
+.icon-officebuilding::before {
+  content: "\ea4a";
+}
+
+.icon-advisor::before {
+  content: "\e905";
+}
+
+.icon-chat::before {
+  content: "\e97b";
+}
+
+.icon-facebook::before {
+  content: "\e931";
+}
+
+.icon-instagram::before {
+  content: "\eab5";
+}
+
+.icon svg {
+  display: none;
+}
+
 /* Custom columns */
-.col-1by4 {
+.col-1by4,
+.col-1by2 {
   display: flex;
+}
+
+.col-1by2 > div {
+  width: 50%;
 }
 
 .col-1by4 > div {
@@ -388,12 +426,14 @@ main img {
 }
 
 @media (max-width: 900px) {
-  .col-1by4 {
+  .col-1by4,
+  .col-1by2 {
     display: block;
   }
 
   .col-1by4 > div,
-  .col-1by4 > div:last-child {
+  .col-1by4 > div:last-child,
+  .col-1by2 > div {
     width: 100%;
   }
 }
@@ -407,7 +447,7 @@ header, main, footer {
 } 
 
 main {
-  padding: 80px 0 0 30px;
+  padding: 80px 30px 0;
 }
 
 @media (max-width: 768px) {
@@ -564,37 +604,9 @@ main {
   color: #202336;
 }
 
-.icon-userlogin::before {
-  content: "\e927";
-}
-
-.icon-award::before {
-  content: "\e9ba";
-}
-
-.icon-officebuilding::before {
-  content: "\ea4a";
-}
-
-.icon-advisor::before {
-  content: "\e905";
-}
-
-.icon svg {
-  display: none;
-}
-
 .followme .icon {
   font-size: 50px;
   height: 50px;
-}
-
-.followme .icon-facebook::before {
-  content: "\e931";
-}
-
-.followme .icon-instagram::before {
-  content: "\eab5";
 }
 
 /* Contact form block */
@@ -615,4 +627,78 @@ main {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+
+/* Facebook chat section */
+.section.tiles-container.facebook-chat {
+  padding: 50px 0;
+}
+
+.facebook-chat .tiles-wrapper {
+  min-height: 110px;
+}
+
+.facebook-chat .tile-container {
+  height: 110px;
+}
+
+.facebook-chat .tile,
+.facebook-chat .tile-body .tile-body-wrapper {
+  padding: 0;
+}
+
+.facebook-chat .tile-bg-white {
+  border: 1px solid #ededed;
+}
+
+.facebook-chat .tile-body {
+  padding: 0;
+  margin: 30px 0 0 30px;
+}
+
+.facebook-chat .tile-body-wrapper .icon {
+  font-size: 50px;
+  color: #202336;
+  position: relative;
+  bottom: auto;
+  float: left;
+}
+
+.facebook-chat .tile-body-wrapper p {
+  margin: 0;
+  display: contents;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child {
+  width: 85%;
+  font-weight: 600;
+  line-height: 1.63;
+  color: #282b3e;
+  letter-spacing: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0 30px;
+  position:unset;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
+  position: relative;
+  font-family: Manulife JH Sans,'static-icons' !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\e903";
+  color: #ec6453;
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  right: 0;
+  top: 2px;
+  float: right;
 }
