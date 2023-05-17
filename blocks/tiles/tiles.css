@@ -100,26 +100,37 @@
 /* Tiles colors */
 .tile-bg-orange .tile-container {
   background-color: orange;
+  color: #000;
 }
 
 .tile-bg-green .tile-container {
     background-color: green;
+    color: #fff;
 }
 
 .tile-bg-red .tile-container {
     background-color: red;
+    color: #000;
 }
 
 .tile-bg-blue .tile-container {
     background-color: blue;
+    color: #fff;
 }
 
 .tile-bg-jade .tile-container {
     background-color: #00a758;
+    color: #000;
 }
 
 .tile-bg-cyan .tile-container {
     background-color: #07857d;
+    color: #000;
+}
+
+.tile-bg-white .tile-container {
+  background-color: #fff;
+  color: #000;
 }
 
 .tile:hover .tile-container {
@@ -132,5 +143,5 @@
 .tile:hover .tile-image {
   margin-top: -15px;
   transition: all .25s;
-  box-shadow: 0 12px 16px #000 !important;
+  box-shadow: 0 12px 16px #0003 !important;
 }
