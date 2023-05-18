@@ -97,6 +97,7 @@
   --color-dark-green: #1a1c28;
   --color-crayola: #2f3246;
   --color-orange: #ffa500;
+
   /* Theme color variables */
   --background-color: var(--color-lotion);
   --background-color-mob: var(--color-charcoal);
@@ -111,9 +112,9 @@
   --tile-shadow-color: #0003;
 
   /* fonts */
-  --body-font-family: 'Manulife JH Sans',sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+  --font-family-body: 'Manulife JH Sans',sans-serif;
+  --font-family-txticon: 'Manulife JH Sans',static-icons,sans-serif;
+  --font-family-icon: manulife-icons,sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -203,7 +204,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
   line-height: 1.6;
   color: var(--color-black);
   background-color: var(--background-color);
@@ -218,7 +219,7 @@ header {
 
 i, em,
 b, strong {
-  font-family: 'Manulife JH Serif',serif;
+  font-family: var(--font-family-body);
 }
 
 /* Headings */
@@ -324,11 +325,6 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, pre, samp {
-  font-family: var(--fixed-font-family);
-  font-size: var(--body-font-size-s);
-}
-
 code, samp {
   padding: .125em;
 }
@@ -360,7 +356,7 @@ a:any-link {
 
 .button-container em {
   font-style: normal;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
 }
 
 .button-container a.secondary {
@@ -380,7 +376,7 @@ a:any-link {
 }
 
 .button-container a.secondary::before {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  font-family: var(--font-family-txticon);
   content: "\e933";
   color: var(--link-color-secondary);
   font-size: 20px;
@@ -412,12 +408,12 @@ main img {
 
 /* Icons */
 .icon {
-  font-family: manulife-icons,sans-serif !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  font-family: var(--font-family-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 
 .icon-userlogin::before {
@@ -775,7 +771,7 @@ main {
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
   position: relative;
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  font-family: var(--font-family-txticon);
   font-style: normal;
   font-weight: normal;
   font-variant: normal;

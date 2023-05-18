@@ -94,7 +94,7 @@ header .nav-wrapper .nav-brand {
 }
 
 .nav-tools .icon-search {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  font-family: var(--font-family-txticon);
   font-size: 20px;
 }
 
