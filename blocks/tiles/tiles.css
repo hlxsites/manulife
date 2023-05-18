@@ -1,0 +1,184 @@
+.section.tiles-container {
+  padding: 0;
+}
+
+.tiles-container h2 {
+  margin-bottom: 0;
+}
+
+.tiles-wrapper {
+  clear: both;
+  display: block;
+  min-height: 400px;
+}
+
+.tiles {
+  margin: 0;
+  padding: 0;
+  clear: both;
+  display: block;
+}
+
+.tile {
+  width: 25%;
+  padding: 0 10px;
+  margin: 10px 0;
+  float: left;
+  position: relative;
+}
+
+.col-1by2 .tile {
+  width: 100%;
+}
+
+.tile-container {
+  height: 380px;
+  transition: all .25s;
+  position: relative;
+}
+
+.tile a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-decoration: none;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.tile-image {
+    width: 100%;
+    height: 100%;
+}
+
+.tile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tile-body {
+  padding: 20px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.tile-body .tile-body-wrapper {
+    padding: 0 20px 20px 0;
+    color: #fff;
+    font-size: 1.375rem;
+    font-weight: normal;
+    overflow: hidden;
+    word-break: break-word;
+    max-height: 158px;
+    line-height: 30px;
+}
+
+.tile-body .tile-body-wrapper p:last-child {
+    bottom: 0;
+    top: auto;
+    position: absolute;
+}
+
+.tile-body-wrapper .icon {
+    font-size: 80px;
+    display: block;
+    bottom: 210px;
+    position: absolute;
+}
+
+@media (max-width: 768px) {
+  .tile {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+  }
+}
+
+/* Tiles colors */
+.tile-bg-orange .tile-container {
+  background-color: orange;
+}
+
+.tile-bg-orange .tile-container a {
+  color: #000;
+}
+
+.tile-bg-green .tile-container {
+    background-color: green;
+}
+
+.tile-bg-green .tile-container a {
+  color: #fff;
+}
+
+.tile-bg-red .tile-container {
+    background-color: red;
+}
+
+.tile-bg-red .tile-container a {
+  color: #000;
+}
+
+.tile-bg-blue .tile-container {
+    background-color: blue;
+}
+
+.tile-bg-blue .tile-container a {
+  color: #fff;
+}
+
+.tile-bg-jade .tile-container {
+    background-color: #00a758;
+}
+
+.tile-bg-jade .tile-container a {
+  color: #000;
+}
+
+.tile-bg-cyan .tile-container {
+    background-color: #07857d;
+}
+
+.tile-bg-cyan .tile-container a {
+  color: #000;
+}
+
+.tile-bg-white .tile-container {
+  background-color: #fff;
+}
+
+.tile-bg-white .tile-container a,
+.tile-bg-white .tile-body .tile-body-wrapper {
+  color: #000;
+}
+
+.tile:hover .tile-container {
+  cursor: auto;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  box-shadow: 0 12px 16px #0003;
+}
+
+.tile:hover .tile-image {
+  margin-top: -15px;
+  transition: all .25s;
+  box-shadow: 0 12px 16px #0003;
+}
+
+.no-effect .tile:hover .tile-container {
+  margin: 0;
+  box-shadow: none;
+}
+
+.no-effect .tile:hover .tile-image {
+  margin: 0;
+  transition: none;
+  box-shadow: none;
+}
