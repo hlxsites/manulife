@@ -101,7 +101,7 @@ function mobileNav(header) {
 
   const mobLogo = document.createElement('a');
   mobLogo.id = 'mob-nav-logo';
-  mobLogo.className = 'icon';
+  mobLogo.className = 'icon icon-nav-logo';
   mobLogo.setAttribute('aria-label', 'Home');
   mobLogo.href = '/';
   mobNav.append(mobLogo);
@@ -146,7 +146,7 @@ function mobileNav(header) {
 function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
-  navLogo.className = 'icon';
+  navLogo.className = 'icon icon-nav-logo';
   navLogo.setAttribute('aria-label', 'Home');
   navLogo.href = '/';
   nav.prepend(navLogo);
@@ -157,7 +157,7 @@ function decorateNavigation(nav) {
       a.className = 'hide';
     } else {
       const c = linkText.split(' ');
-      const clsName = `icon nav-icon-${c[0].toLowerCase()}`;
+      const clsName = `icon icon-${c[0].toLowerCase()}`;
 
       const navIcon = document.createElement('span');
       navIcon.className = '';

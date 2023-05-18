@@ -24,11 +24,12 @@ export default async function decorate(block) {
       const section = footer.children[0].children[i];
       if (section) section.classList.add(`foot-${c}`);
       if (i === 1) {
-        const socail = ['fb', 'insta', 'tw', 'yt'];
+        const socail = ['facebook', 'instagram', 'twitter', 'youtube'];
         socail.forEach((a, b) => {
           const slink = section.children[0].children[1].children[b];
           if (slink) {
-            slink.classList.add(`social-${a}`);
+            slink.classList.add('icon');
+            slink.classList.add(`icon-${a}`);
             slink.setAttribute('aria-label', slink.innerHTML);
             const sText = document.createElement('span');
             sText.innerHTML = slink.innerHTML;
