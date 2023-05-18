@@ -82,14 +82,14 @@
   --color-white: #fff;
   --color-black: #000;
   --color-green: #008000;
-  --color-red: #ff0000;
-  --color-blue: #0000ff;
+  --color-red: #f00;
+  --color-blue: #0ff;
   --color-cyan: #07857d;
   --color-lotion: #fafafa;
   --color-fire-opal: #ec6453;
   --color-dark-gunmetal: #202336;
   --color-medium-blue: #0000c1;
-  --color-bright-gray: #eeeeee;
+  --color-bright-gray: #eee;
   --color-brighter-grey: #ededed;
   --color-cool-gray: #8e90a2;
   --color-charcoal: #34384b;
@@ -97,7 +97,7 @@
   --color-dark-green: #1a1c28;
   --color-crayola: #2f3246;
   --color-orange: #ffa500;
-
+  /* Theme color variables */
   --background-color: var(--color-lotion);
   --background-color-mob: var(--color-charcoal);
   --overlay-background-color: var(--color-bright-gray);
