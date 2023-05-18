@@ -71,7 +71,7 @@ header .nav-wrapper .nav-brand {
     width: auto;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: var(--font-weight-bolder);
     justify-content: center;
     padding: 17px 20px;
     background-color: #fff;

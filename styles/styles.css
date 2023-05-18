@@ -10,48 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
-  /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: #fafafa;
-  --footer-background-color: #282b3e;
-  --overlay-background-color: #eee;
-  --text-color: #000;
-  --white-color: #fff;
-
-  /* fonts */
-  --body-font-family: 'Manulife JH Sans',sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
-  /* nav height */
-  --nav-height: 64px;
-
-}
-
-/* Fonts */
-
-/* import common files and component styles */
-
-/* Preferred encoding for web pages */
-
-/* import font from web; still to explore optimal location for font files */
-
-/* Manulife JH Sans */
+ /* Manulife JH Sans */
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Light.eot');
@@ -115,6 +74,71 @@
   font-style: normal;
   font-display: block;
 }
+
+ :root {
+  /* colors */
+  --link-color: #035fe6;
+  --link-hover-color: #136ff6;
+  --background-color: #fafafa;
+  --footer-background-color: #282b3e;
+  --overlay-background-color: #eee;
+  --text-color: #000;
+  --white-color: #fff;
+
+  /* fonts */
+  --body-font-family: 'Manulife JH Sans',sans-serif;
+  --heading-font-family: var(--body-font-family);
+  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* nav height */
+  --nav-height: 64px;
+
+  /* font weights */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 500;
+  --font-weight-bolder: 600;
+  --font-weight-boldest: 700;
+  --font-weight-heavy: 900;
+
+  /* font sizes */
+  --font-size-50: 0.5rem;
+  --font-size-75: 0.75rem;
+  --font-size-80: 0.8rem;
+  --font-size-90: 0.9rem;
+  --font-size-100: 1rem;
+  --font-size-120: 1.20rem;
+  --font-size-125: 1.25rem;
+  --font-size-130: 1.3rem;
+  --font-size-150: 1.5rem;
+  --font-size-175: 1.75rem;
+  --font-size-180: 1.75rem;
+  --font-size-185: 1.85rem;
+  --font-size-200: 2rem;
+  --font-size-215: 2.15rem;
+  --font-size-250: 2.5rem;
+}
+
+/* Fonts */
+
+/* import common files and component styles */
+
+/* Preferred encoding for web pages */
+
+/* import font from web; still to explore optimal location for font files */
 
 @media (min-width: 900px) {
   :root {
@@ -181,7 +205,7 @@ h5,
 h6 {
   word-wrap: break-word;
   line-height: 1;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
 }
 
 h1 {
@@ -310,7 +334,7 @@ a:hover {
   color: #282b3e;
   display: inline-block;
   font-size: .875rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
 }
 
 .button-container em {
@@ -515,7 +539,7 @@ main {
   font-size: 2rem;
   line-height: 3.125rem;
   word-break: break-word;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
   color: #fff;
   max-height: 210px;
   padding-bottom: 0.5rem;
@@ -541,7 +565,7 @@ main {
 .userprofile .columns-2-cols > div > div ~ div p {
   word-break: break-word;
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: var(--font-weight-thin);
     line-height: 1.44;
     color: #fff;
     max-height: 104px;
@@ -581,7 +605,7 @@ main {
 .aboutme h3,
 .followme h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   line-height: 1.63;
   color: #282b3e;
   max-height: 52px;
@@ -622,7 +646,7 @@ main {
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   font-size: 1.375rem;
   line-height: 2rem;
 }
@@ -671,7 +695,7 @@ main {
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child {
   width: 85%;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   line-height: 1.63;
   color: #282b3e;
   letter-spacing: normal;

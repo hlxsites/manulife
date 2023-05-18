@@ -1,5 +1,5 @@
 .footer {
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   color: var(--white-color) !important;
   width: auto; 
   margin: 50px 0 0 !important;
@@ -87,7 +87,7 @@
 
 .footer .columns > div > div > ul li a {
   color: #fff !important;
-  font-weight: 400;
+  font-weight: var(--font-weight-regular);
   font-size: .875rem;
   line-height: 1.43;
 }
