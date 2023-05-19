@@ -535,7 +535,7 @@ main {
   padding: 80px 30px 0;
 }
 
-.desktopHide {
+.desktop-hide {
   display: none;
 }
 
@@ -553,7 +553,7 @@ main {
     padding: 60px 0 0 20px;
   }
 
-  .desktopHide {
+  .desktop-hide {
     display: block;
   }
 }

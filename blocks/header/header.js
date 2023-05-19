@@ -153,7 +153,7 @@ function decorateNavigation(nav) {
 
   const mainListContainer = nav.querySelector('.nav-top-left > ul');
   const searchContainer = document.createElement('li');
-  searchContainer.classList.add('desktopHide');
+  searchContainer.classList.add('desktop-hide');
   const searchLink = document.createElement('a');
   searchLink.classList = 'nav-search';
   searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
