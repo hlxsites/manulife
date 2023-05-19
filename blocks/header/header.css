@@ -55,12 +55,12 @@ header .nav-wrapper .nav-brand {
 }
 
 .nav-tools > ul > li a {
-  color: #282b3e;
+  color: var(--color-base-primary);
 }
 
 .nav-top-left ul > li a {
   padding: 20px 0;
-    color: #fff;
+    color: var(--color-white);
     font-size: .71rem;
     display: block;
 }
@@ -71,14 +71,14 @@ header .nav-wrapper .nav-brand {
     width: auto;
     display: flex;
     align-items: center;
-    font-weight: 600;
+    font-weight: var(--font-weight-bolder);
     justify-content: center;
     padding: 17px 20px;
-    background-color: #fff;
+    background-color: var(--color-white);
     font-size: .875rem;
     line-height: 1.43;
-    border: solid 2px #dc5a44;
-    color: #282b3e;
+    border: solid 2px var(--color-base-secondary);
+    color: var(--color-base-primary);
     margin-bottom: 0;
     text-align: center;
     vertical-align: middle;
@@ -89,24 +89,28 @@ header .nav-wrapper .nav-brand {
 }
 
 .nav-tools > ul > li:last-child a:hover {
-  background-color: #dc5a44;
-    color: #fff;
+  background-color: var(--color-base-secondary);
+  color: var(--color-white);
 }
 
-.nav-tools .icon-search {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+.nav-tools .icon-search,
+.nav-top-left .icon-search {
+  font-family: var(--font-family-txticon);
   font-size: 20px;
 }
 
 .nav-tools .icon-search::before {
-  content: "\e931";
-  color: #8e90a2;
+  color: var(--color-cool-gray);
+}
+
+.nav-tools a:hover .icon-search::before {
+  color: var(--link-color-secondary);
 }
 
 .nav-top-left ul {
   list-style: none;
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-tools .icon-search svg,
@@ -122,41 +126,37 @@ header .nav-wrapper .nav-brand {
 /* Left navigation */
 .nav-top-left {
   position: fixed;
-    height: 100%;
-    width: 80px;
-    top: 0;
-    left: 0;
-    background-color: #34384b;
-    overflow: hidden;
-    z-index: 1002;
-    display: inline-table;
+  height: 100%;
+  width: 80px;
+  top: 0;
+  left: 0;
+  background-color: var(--background-color-mob);
+  overflow: hidden;
+  z-index: 1002;
+  display: inline-table;
 }
 
 .nav-top-left #nav-logo {
   display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #00a758;
-    height: 80px;
-    font-size: 30px;
-    color: #fff !important;
-    width: 100%;
-}
-
-.nav-top-left #nav-logo::before {
-  content: "\e917";
+  align-items: center;
+  justify-content: center;
+  background-color: var(--nav-logo-color);
+  height: 80px;
+  font-size: 30px;
+  color: var(--color-white) !important;
+  width: 100%;
 }
 
 .nav-top-left ul > li { 
   text-align: center;
-    border-bottom: solid 1px #2f3246;
-    height: 80px;
-    cursor: pointer;
+  border-bottom: solid 1px var(--nav-bg);
+  height: 80px;
+  cursor: pointer;
 }
 
 .nav-top-left ul > li:hover {
-  background-color: #282b3e;
-    color: #fff;
+  background-color: var(--color-base-primary);
+    color: var(--color-white);
 }
 
 .nav-top-left ul > li > ul {
@@ -165,36 +165,8 @@ header .nav-wrapper .nav-brand {
 
 .nav-top-left a > span.icon {
   display: block;
-    margin: 0 auto 10px;
-    font-size: 20px;
-}
-
-.nav-icon-goal::before {
-  content: "\e969";
-}
-
-.nav-icon-products::before {
-  content: "\e989";
-}
-
-.nav-icon-buy::before {
-  content: "\ea7f";
-}
-
-.nav-icon-funds::before {
-  content: "\e913";
-}
-
-.nav-icon-services::before {
-  content: "\e911";
-}
-
-.nav-icon-about::before {
-  content: "\e98a";
-}
-
-.nav-icon-contact::before {
-  content: "\e90f";
+  margin: 0 auto 10px;
+  font-size: 20px;
 }
 
 .nav-mob {
@@ -204,7 +176,7 @@ header .nav-wrapper .nav-brand {
   left: 0;
   right: 0;
   height: 60px;
-  background-color: #34384b;
+  background-color: var(--background-color-mob);
   min-width: 320px;
   z-index: 1005;
   flex-wrap: wrap;
@@ -245,25 +217,25 @@ header .nav-wrapper .nav-brand {
     overflow-x: hidden;
     overflow-y: auto;
     padding-bottom: 60px;
-    background-color: #fff;
+    background-color: var(--color-white);
   }
 
   .nav-top-left ul > li {
     height: 70px;
     display: flex;
-    border-bottom: 1px solid #ededed;
-    background-color: #fff;
+    border-bottom: 1px solid var(--border-color);
+    background-color: var(--color-white);
     position: relative;
     padding: 0;
     text-align: left;
   }
 
   .nav-top-left ul > li:hover {
-    background-color: #fff;
+    background-color: var(--color-white);
   }
 
   .nav-top-left ul > li a {
-    color: #282b3e;
+    color: var(--color-base-primary);
     font-size: 1rem;
     line-height: 16px;
     opacity: 1;
@@ -282,17 +254,13 @@ header .nav-wrapper .nav-brand {
 
 #mob-nav-logo {
   font-size: 30px;
-  color: #fff;
+  color: var(--color-white);
   height: 60px;
   width: 60px;
   align-items: center;
-  background-color: #00a758;
+  background-color: var(--nav-logo-color);
   justify-content: center;
   display: flex;
-}
-
-#mob-nav-logo::before {
-  content: "\e917";
 }
 
 #nav-logo-manulife {
@@ -314,7 +282,7 @@ header .nav-wrapper .nav-brand {
 .nav-mob-user {
   width: 60px;
   height: 60px;
-  border-left: solid 1px #282b3e;
+  border-left: solid 1px var(--color-base-primary);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -326,7 +294,7 @@ header .nav-wrapper .nav-brand {
 .nav-mob-menu {
   width: 60px;
   height: 60px;
-  border-left: solid 1px #282b3e;
+  border-left: solid 1px var(--color-base-primary);
   margin: 0;
   padding: 20px;
   text-align: center;
@@ -338,7 +306,7 @@ header .nav-wrapper .nav-brand {
   display: block;
   height: 2px;
   transform: none;
-  background: #fff;
+  background: var(--color-white);
   transition: transform 500ms ease;
   top: 9px;
 }
@@ -352,7 +320,7 @@ header .nav-wrapper .nav-brand {
   left: 0;
   display: block;
   height: 2px;
-  background: #fff;
+  background: var(--color-white);
   transition: top 500ms ease 500ms,transform 500ms ease;
 }
 
@@ -362,7 +330,7 @@ header .nav-wrapper .nav-brand {
 }
 
 .is-open-menu .nav-mob-menu {
-  background-color: #1a1c28;
+  background-color: var(--nav-bg-mobile);
 }
 
 .is-open-menu .nav-mob-menu span {

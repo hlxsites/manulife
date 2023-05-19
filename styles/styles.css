@@ -10,48 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
-  /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: #fafafa;
-  --footer-background-color: #282b3e;
-  --overlay-background-color: #eee;
-  --text-color: #000;
-  --white-color: #fff;
-
-  /* fonts */
-  --body-font-family: 'Manulife JH Sans',sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
-  /* nav height */
-  --nav-height: 64px;
-
-}
-
-/* Fonts */
-
-/* import common files and component styles */
-
-/* Preferred encoding for web pages */
-
-/* import font from web; still to explore optimal location for font files */
-
-/* Manulife JH Sans */
+ /* Manulife JH Sans */
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Light.eot');
@@ -116,6 +75,98 @@
   font-display: block;
 }
 
+ :root {
+  /* colors */
+  --color-base-primary: #282b3e;
+  --color-base-secondary: #dc5a44;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-green: #008000;
+  --color-red: #f00;
+  --color-blue: #00f;
+  --color-cyan: #07857d;
+  --color-lotion: #fafafa;
+  --color-fire-opal: #ec6453;
+  --color-dark-gunmetal: #202336;
+  --color-medium-blue: #0000c1;
+  --color-bright-gray: #eee;
+  --color-brighter-grey: #ededed;
+  --color-cool-gray: #8e90a2;
+  --color-charcoal: #34384b;
+  --color-jade: #00a758;
+  --color-dark-green: #1a1c28;
+  --color-crayola: #2f3246;
+  --color-orange: #ffa500;
+
+  /* Theme color variables */
+  --background-color: var(--color-lotion);
+  --background-color-mob: var(--color-charcoal);
+  --overlay-background-color: var(--color-bright-gray);
+  --link-color-secondary: var(--color-fire-opal);
+  --icon-color-dark: var(-color-dark-gunmetal);
+  --nav-logo-color: var(--color-jade);
+  --nav-bg-mobile: var(--color-dark-green);
+  --nav-bg: var(--color-crayola);
+  --border-color: var(--color-brighter-grey);
+  --footer-social-border-color: var(--color-charcoal);
+  --tile-shadow-color: #0003;
+
+  /* fonts */
+  --font-family-body: 'Manulife JH Sans',sans-serif;
+  --font-family-style: 'Manulife JH Serif',serif;
+  --font-family-txticon: 'Manulife JH Sans',static-icons,sans-serif;
+  --font-family-icon: manulife-icons,sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* nav height */
+  --nav-height: 64px;
+
+  /* font weights */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 500;
+  --font-weight-bolder: 600;
+  --font-weight-boldest: 700;
+  --font-weight-heavy: 900;
+
+  /* font sizes */
+  --font-size-50: 0.5rem;
+  --font-size-75: 0.75rem;
+  --font-size-80: 0.8rem;
+  --font-size-90: 0.9rem;
+  --font-size-100: 1rem;
+  --font-size-120: 1.20rem;
+  --font-size-125: 1.25rem;
+  --font-size-130: 1.3rem;
+  --font-size-150: 1.5rem;
+  --font-size-175: 1.75rem;
+  --font-size-180: 1.75rem;
+  --font-size-185: 1.85rem;
+  --font-size-200: 2rem;
+  --font-size-215: 2.15rem;
+  --font-size-250: 2.5rem;
+}
+
+/* Fonts */
+
+/* import common files and component styles */
+
+/* Preferred encoding for web pages */
+
+/* import font from web; still to explore optimal location for font files */
+
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
@@ -154,9 +205,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--color-black);
   background-color: var(--background-color);
   min-height: 100%;
   position: relative;
@@ -169,7 +220,7 @@ header {
 
 i, em,
 b, strong {
-  font-family: 'Manulife JH Serif',serif;
+  font-family: var(--font-family-style);
 }
 
 /* Headings */
@@ -181,7 +232,7 @@ h5,
 h6 {
   word-wrap: break-word;
   line-height: 1;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
 }
 
 h1 {
@@ -275,11 +326,6 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, pre, samp {
-  font-family: var(--fixed-font-family);
-  font-size: var(--body-font-size-s);
-}
-
 code, samp {
   padding: .125em;
 }
@@ -302,20 +348,16 @@ a:any-link {
   word-break: break-word;
 }
 
-a:hover {
-  color: var(--link-hover-color);
-}
-
 .button-container {
-  color: #282b3e;
+  color: var(--color-base-primary);
   display: inline-block;
   font-size: .875rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
 }
 
 .button-container em {
   font-style: normal;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
 }
 
 .button-container a.secondary {
@@ -325,7 +367,7 @@ a:hover {
   line-height: 1.43;
   display: inline-block;
   font-size: .875rem;
-  color: #282b3e !important;
+  color: var(--color-base-primary) !important;
   text-decoration: none;
   border: 0;
   cursor: pointer;
@@ -335,9 +377,9 @@ a:hover {
 }
 
 .button-container a.secondary::before {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  font-family: var(--font-family-txticon);
   content: "\e933";
-  color: #ec6453;
+  color: var(--link-color-secondary);
   font-size: 20px;
   position: absolute;
   width: 28px;
@@ -367,12 +409,12 @@ main img {
 
 /* Icons */
 .icon {
-  font-family: manulife-icons,sans-serif !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  font-family: var(--font-family-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 
 .icon-userlogin::before {
@@ -401,6 +443,50 @@ main img {
 
 .icon-instagram::before {
   content: "\eab5";
+}
+
+.icon-twitter::before {
+  content: "\eab1";
+}
+
+.icon-youtube::before {
+  content: "\eab3";
+}
+
+.icon-search::before {
+  content: "\e931";
+}
+
+.icon-goal::before {
+  content: "\e969";
+}
+
+.icon-products::before {
+  content: "\e989";
+}
+
+.icon-buy::before {
+  content: "\ea7f";
+}
+
+.icon-funds::before {
+  content: "\e913";
+}
+
+.icon-services::before {
+  content: "\e911";
+}
+
+.icon-about::before {
+  content: "\e98a";
+}
+
+.icon-contact::before {
+  content: "\e90f";
+}
+
+.icon-nav-logo::before {
+  content: "\e917";
 }
 
 .icon svg {
@@ -450,6 +536,10 @@ main {
   padding: 80px 30px 0;
 }
 
+.desktop-hide {
+  display: none;
+}
+
 @media (max-width: 768px) {
   main, footer {
     width: 100%;
@@ -463,6 +553,10 @@ main {
   footer {
     padding: 60px 0 0 20px;
   }
+
+  .desktop-hide {
+    display: block;
+  }
 }
 
 /* User Profile section */
@@ -474,7 +568,7 @@ main {
 .userprofile .columns-img-col {
   height: 400px;
   flex: unset;
-  background-color: #202336;
+  background-color: var(--icon-color-dark);
   float: left;
   width: 436px;
 }
@@ -496,9 +590,9 @@ main {
 }
 
 .userprofile .columns-2-cols > div > div ~ div {
-  background-color: #0000c1;
+  background-color: var(--color-medium-blue);
   padding: 40px;
-  color: #fff;
+  color: var(--color-white);
   float: left;
   flex: unset;
   width: calc(60px + 75%) !important;
@@ -515,8 +609,8 @@ main {
   font-size: 2rem;
   line-height: 3.125rem;
   word-break: break-word;
-  font-weight: 300;
-  color: #fff;
+  font-weight: var(--font-weight-thin);
+  color: var(--color-white);
   max-height: 210px;
   padding-bottom: 0.5rem;
   margin: 0 0 20px;
@@ -528,7 +622,7 @@ main {
   font-size: .875rem;
   font-weight: normal;
   line-height: 1.43;
-  color: #282b3e;
+  color: var(--color-base-primary);
   word-break: break-word;
   padding: 0;
 }
@@ -541,9 +635,9 @@ main {
 .userprofile .columns-2-cols > div > div ~ div p {
   word-break: break-word;
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: var(--font-weight-thin);
     line-height: 1.44;
-    color: #fff;
+    color: var(--color-white);
     max-height: 104px;
     margin: 0;
 }
@@ -581,9 +675,9 @@ main {
 .aboutme h3,
 .followme h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   line-height: 1.63;
-  color: #282b3e;
+  color: var(--color-base-primary);
   max-height: 52px;
   overflow: hidden;
   padding: 0;
@@ -606,7 +700,7 @@ main {
   height: 80px;
   display: block;
   font-size: 80px;
-  color: #202336;
+  color: var(--icon-color-dark);
 }
 
 .followme .icon {
@@ -622,7 +716,7 @@ main {
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   font-size: 1.375rem;
   line-height: 2rem;
 }
@@ -653,7 +747,7 @@ main {
 }
 
 .facebook-chat .tile-bg-white {
-  border: 1px solid #ededed;
+  border: 1px solid var(--border-color);
 }
 
 .facebook-chat .tile-body {
@@ -663,7 +757,7 @@ main {
 
 .facebook-chat .tile-body-wrapper .icon {
   font-size: 50px;
-  color: #202336;
+  color: var(--icon-color-dark);
   position: relative;
   bottom: auto;
   float: left;
@@ -671,9 +765,9 @@ main {
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child {
   width: 85%;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   line-height: 1.63;
-  color: #282b3e;
+  color: var(--color-base-primary);
   letter-spacing: normal;
   font-style: normal;
   font-stretch: normal;
@@ -686,14 +780,14 @@ main {
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
   position: relative;
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
+  font-family: var(--font-family-txticon);
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
   text-transform: none;
   line-height: 1;
   content: "\e903";
-  color: #ec6453;
+  color: var(--link-color-secondary);
   font-size: 20px;
   width: 28px;
   height: 28px;

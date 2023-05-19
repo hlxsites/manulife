@@ -71,7 +71,7 @@
 
 .tile-body .tile-body-wrapper {
     padding: 0 20px 20px 0;
-    color: #fff;
+    color: var(--color-white);
     font-size: 1.375rem;
     font-weight: normal;
     overflow: hidden;
@@ -103,73 +103,58 @@
 
 /* Tiles colors */
 .tile-bg-orange .tile-container {
-  background-color: orange;
-}
-
-.tile-bg-orange .tile-container a {
-  color: #000;
+  background-color: var(--color-orange);
 }
 
 .tile-bg-green .tile-container {
-    background-color: green;
-}
-
-.tile-bg-green .tile-container a {
-  color: #fff;
+  background-color: var(--color-green);
 }
 
 .tile-bg-red .tile-container {
-    background-color: red;
-}
-
-.tile-bg-red .tile-container a {
-  color: #000;
+  background-color: var(--color-red);
 }
 
 .tile-bg-blue .tile-container {
-    background-color: blue;
-}
-
-.tile-bg-blue .tile-container a {
-  color: #fff;
+  background-color: var(--color-blue);
 }
 
 .tile-bg-jade .tile-container {
-    background-color: #00a758;
-}
-
-.tile-bg-jade .tile-container a {
-  color: #000;
+  background-color: var(--color-jade);
 }
 
 .tile-bg-cyan .tile-container {
-    background-color: #07857d;
-}
-
-.tile-bg-cyan .tile-container a {
-  color: #000;
+  background-color: var(--color-cyan);
 }
 
 .tile-bg-white .tile-container {
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 
+.tile-bg-cyan .tile-container a,
+.tile-bg-jade .tile-container a,
+.tile-bg-red .tile-container a,
+.tile-bg-orange .tile-container a,
 .tile-bg-white .tile-container a,
 .tile-bg-white .tile-body .tile-body-wrapper {
-  color: #000;
+  color: var(--color-black);
+}
+
+.tile-bg-blue .tile-container a,
+.tile-bg-green .tile-container a {
+  color: var(--color-white);
 }
 
 .tile:hover .tile-container {
   cursor: auto;
   margin-top: -15px;
   margin-bottom: 15px;
-  box-shadow: 0 12px 16px #0003;
+  box-shadow: 0 12px 16px var(--tile-shadow-color);
 }
 
 .tile:hover .tile-image {
   margin-top: -15px;
   transition: all .25s;
-  box-shadow: 0 12px 16px #0003;
+  box-shadow: 0 12px 16px var(--tile-shadow-color);
 }
 
 .no-effect .tile:hover .tile-container {
