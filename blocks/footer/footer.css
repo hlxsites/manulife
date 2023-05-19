@@ -1,10 +1,10 @@
 .footer {
-  font-weight: 400;
-  color: var(--white-color) !important;
+  font-weight: var(--font-weight-regular);
+  color: var(--color-white) !important;
   width: auto; 
   margin: 50px 0 0 !important;
   min-height:56px;
-  background: var(--footer-background-color);
+  background: var(--color-base-primary);
 }
 
 @media (max-width: 768px) {
@@ -29,6 +29,10 @@
     padding: 0 60px 60px !important;
     margin-left: -50px !important;
   }
+}
+
+.footer .foot-social > div {
+  margin: 0 40px;
 }
 
 .footer .foot-primary > div > div {
@@ -63,38 +67,32 @@
 
 .footer .foot-social div > a {
   width: 40px;
-    height: 40px;
-    margin-right: 11.3px;
-    position: relative;
-    display: inline-block;
-    border: 1px solid #34384b;
-    border-radius: 50%;
-    font-size: 38px;
-    background-size: 38px;
-    font-family: manulife-icons, sans-serif !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
-    -webkit-font-smoothing: antialiased;
-    color: #fff !important;
+  height: 40px;
+  margin-right: 11.3px;
+  position: relative;
+  display: inline-block;
+  border: 1px solid var(--footer-social-border-color);
+  border-radius: 50%;
+  font-size: 38px;
+  background-size: 38px;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-white) !important;
 }
 
 .footer .columns > div > div > ul li a {
-  color: #fff !important;
-  font-weight: 400;
+  color: var(--color-white) !important;
+  font-weight: var(--font-weight-regular);
   font-size: .875rem;
   line-height: 1.43;
 }
 
 .footer .foot-social div > a:hover {
-  border-color: #fff;
+  border-color: var(--color-white);
 }
 
 .footer .columns > div > div > ul li a:hover {
   text-decoration: none !important;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid var(--color-white);
 }
 
 .footer ul {
@@ -105,9 +103,9 @@
 
 .footer .foot-social {
   padding: 30px 0 20px;
-  margin: 30px 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
+  margin: 30px -40px;
+  border-top: 1px solid var(--color-black);
+  border-bottom: 1px solid var(--color-black);
 }
 
 .footer .foot-social > div > div > ul li {
@@ -123,36 +121,21 @@
   display: inline-block;
 }
 
-.footer .foot-social div > a.social-fb::before {
-  content: "\e931";
-}
-
-.footer .foot-social div > a.social-insta::before {
-  content: "\eab5";
-}
-
-.footer .foot-social div > a.social-tw::before {
-  content: "\eab1";
-}
-
-.footer .foot-social div > a.social-yt::before {
-  content: "\eab3";
-}
-
 .footer .foot-disc {
     line-height: 1.33;
     height: 1rem;
     font-size: .75rem;
     padding: 15px 0;
-    width: 64%;
+    width: 70%;
 }
 
-/*
-footer .footer {
-  max-width: 1200px;
-  margin: auto;
-}
+@media (max-width: 768px) {
+  .footer a {
+    font-size: .875rem;
+    line-height: 2.86;
+  }
 
-footer .footer p {
-  margin: 0;
-} */
+  .foot-social > div > div {
+    margin: 20px 0;
+  }
+}

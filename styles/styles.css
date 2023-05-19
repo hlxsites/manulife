@@ -10,49 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- :root {
-  /* colors */
-  --link-color: #035fe6;
-  --link-hover-color: #136ff6;
-  --background-color: #fafafa;
-  --footer-background-color: #282b3e;
-  --overlay-background-color: #eee;
-  --highlight-background-color: #ccc;
-  --text-color: #000;
-  --white-color: #fff;
-
-  /* fonts */
-  --body-font-family: 'Manulife JH Sans',sans-serif;
-  --heading-font-family: var(--body-font-family);
-  --fixed-font-family: 'Roboto Mono', menlo, consolas, 'Liberation Mono', monospace;
-
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 18px;
-  --body-font-size-xs: 16px;
-
-  /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
-  /* nav height */
-  --nav-height: 64px;
-
-}
-
-/* Fonts */
-
-/* import common files and component styles */
-
-/* Preferred encoding for web pages */
-
-/* import font from web; still to explore optimal location for font files */
-
-/* Manulife JH Sans */
+ /* Manulife JH Sans */
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Light.eot');
@@ -117,6 +75,98 @@
   font-display: block;
 }
 
+ :root {
+  /* colors */
+  --color-base-primary: #282b3e;
+  --color-base-secondary: #dc5a44;
+  --color-white: #fff;
+  --color-black: #000;
+  --color-green: #008000;
+  --color-red: #f00;
+  --color-blue: #00f;
+  --color-cyan: #07857d;
+  --color-lotion: #fafafa;
+  --color-fire-opal: #ec6453;
+  --color-dark-gunmetal: #202336;
+  --color-medium-blue: #0000c1;
+  --color-bright-gray: #eee;
+  --color-brighter-grey: #ededed;
+  --color-cool-gray: #8e90a2;
+  --color-charcoal: #34384b;
+  --color-jade: #00a758;
+  --color-dark-green: #1a1c28;
+  --color-crayola: #2f3246;
+  --color-orange: #ffa500;
+
+  /* Theme color variables */
+  --background-color: var(--color-lotion);
+  --background-color-mob: var(--color-charcoal);
+  --overlay-background-color: var(--color-bright-gray);
+  --link-color-secondary: var(--color-fire-opal);
+  --icon-color-dark: var(-color-dark-gunmetal);
+  --nav-logo-color: var(--color-jade);
+  --nav-bg-mobile: var(--color-dark-green);
+  --nav-bg: var(--color-crayola);
+  --border-color: var(--color-brighter-grey);
+  --footer-social-border-color: var(--color-charcoal);
+  --tile-shadow-color: #0003;
+
+  /* fonts */
+  --font-family-body: 'Manulife JH Sans',sans-serif;
+  --font-family-style: 'Manulife JH Serif',serif;
+  --font-family-txticon: 'Manulife JH Sans',static-icons,sans-serif;
+  --font-family-icon: manulife-icons,sans-serif;
+
+  /* body sizes */
+  --body-font-size-m: 22px;
+  --body-font-size-s: 18px;
+  --body-font-size-xs: 16px;
+
+  /* heading sizes */
+  --heading-font-size-xxl: 48px;
+  --heading-font-size-xl: 40px;
+  --heading-font-size-l: 32px;
+  --heading-font-size-m: 24px;
+  --heading-font-size-s: 20px;
+  --heading-font-size-xs: 18px;
+
+  /* nav height */
+  --nav-height: 64px;
+
+  /* font weights */
+  --font-weight-thin: 300;
+  --font-weight-regular: 400;
+  --font-weight-bold: 500;
+  --font-weight-bolder: 600;
+  --font-weight-boldest: 700;
+  --font-weight-heavy: 900;
+
+  /* font sizes */
+  --font-size-50: 0.5rem;
+  --font-size-75: 0.75rem;
+  --font-size-80: 0.8rem;
+  --font-size-90: 0.9rem;
+  --font-size-100: 1rem;
+  --font-size-120: 1.20rem;
+  --font-size-125: 1.25rem;
+  --font-size-130: 1.3rem;
+  --font-size-150: 1.5rem;
+  --font-size-175: 1.75rem;
+  --font-size-180: 1.75rem;
+  --font-size-185: 1.85rem;
+  --font-size-200: 2rem;
+  --font-size-215: 2.15rem;
+  --font-size-250: 2.5rem;
+}
+
+/* Fonts */
+
+/* import common files and component styles */
+
+/* Preferred encoding for web pages */
+
+/* import font from web; still to explore optimal location for font files */
+
 @media (min-width: 900px) {
   :root {
     --heading-font-size-xxl: 60px;
@@ -146,20 +196,22 @@ html {
   box-sizing: border-box;
 }
 
+*,*::before,*::after {
+  box-sizing: inherit;
+}
+
 body {
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0;
-  font-family: var(--body-font-family);
+  font-family: var(--font-family-body);
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--color-black);
   background-color: var(--background-color);
-  display: none;
-}
-
-body.appear {
-  display: unset;
+  min-height: 100%;
+  position: relative;
+  overflow-x: hidden;
 }
 
 header {
@@ -168,7 +220,7 @@ header {
 
 i, em,
 b, strong {
-  font-family: 'Manulife JH Serif',serif;
+  font-family: var(--font-family-style);
 }
 
 /* Headings */
@@ -180,7 +232,7 @@ h5,
 h6 {
   word-wrap: break-word;
   line-height: 1;
-  font-weight: 300;
+  font-weight: var(--font-weight-thin);
 }
 
 h1 {
@@ -274,11 +326,6 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, pre, samp {
-  font-family: var(--fixed-font-family);
-  font-size: var(--body-font-size-s);
-}
-
 code, samp {
   padding: .125em;
 }
@@ -297,82 +344,52 @@ main pre {
 
 a:any-link {
   text-decoration: none;
+  letter-spacing: -0.05px;
+  word-break: break-word;
 }
 
-a:hover {
-  color: var(--link-hover-color);
-}
-
-/* buttons */
-a.button:any-link, button {
-  font-family: var(--body-font-family);
+.button-container {
+  color: var(--color-base-primary);
   display: inline-block;
-  box-sizing: border-box;
-  text-decoration: none;
-  border: 2px solid transparent;
-  padding: 5px 30px;
-  text-align: center;
+  font-size: .875rem;
+  font-weight: var(--font-weight-bolder);
+}
+
+.button-container em {
   font-style: normal;
-  font-weight: 600;
+  font-family: var(--font-family-body);
+}
+
+.button-container a.secondary {
+  margin: 0;
+  padding: 5px 0 5px 35px;
+  font-weight: normal;
+  line-height: 1.43;
+  display: inline-block;
+  font-size: .875rem;
+  color: var(--color-base-primary) !important;
+  text-decoration: none;
+  border: 0;
   cursor: pointer;
-  color: var(--background-color);
-  background-color: var(--link-color);
-  margin: 16px 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  border-radius: 30px;
+  letter-spacing: normal;
+  background: none;
+  position: relative;
 }
 
-a.button:hover, a.button:focus, button:hover, button:focus  {
-  background-color: var(--link-hover-color);
-  cursor: pointer;
+.button-container a.secondary::before {
+  font-family: var(--font-family-txticon);
+  content: "\e933";
+  color: var(--link-color-secondary);
+  font-size: 20px;
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  left: 0;
+  top: -1px;
 }
 
-button:disabled, button:disabled:hover {
-  background-color: var(--overlay-background-color);
-  cursor: unset;
-}
-
-a.button.secondary, button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color)
-}
-
-main input {
-  font-size: 1.25rem;
-  width: 100%;
-  max-width: 50rem;
-  display: block;
-  margin-bottom: 1rem;
-  padding: 0.75rem 0.6rem;
-  border-radius: 0.25rem;
-  box-sizing: border-box;
-  border: 1px solid var(--text-color);
-  color: var(--text-color);
-  background-color: var(--background-color);
-}
-
-main input:hover {
-  border: 1px solid var(--text-color);
-}
-
-main blockquote {
-  font-style: italic;
-  margin: 3rem;
-  text-indent: -1rem;
-  hanging-punctuation: first;
-}
-
-main blockquote p::before {
-  content: "“";
-  line-height: 0;
-}
-
-main blockquote p::after {
-  content: "”";
-  line-height: 0;
+.button-container a.secondary:hover::before {
+  font-size: 23px;
 }
 
 main img {
@@ -390,18 +407,121 @@ main img {
   width: 0 !important;
 }
 
+/* Icons */
 .icon {
-  font-family: manulife-icons,sans-serif !important;
-    font-style: normal;
-    font-weight: normal;
-    font-variant: normal;
-    text-transform: none;
-    line-height: 1;
+  font-family: var(--font-family-icon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
 }
 
-/* section metadata */
-main .section.highlight {
-  background-color: var(--highlight-background-color);
+.icon-userlogin::before {
+  content: "\e927";
+}
+
+.icon-award::before {
+  content: "\e9ba";
+}
+
+.icon-officebuilding::before {
+  content: "\ea4a";
+}
+
+.icon-advisor::before {
+  content: "\e905";
+}
+
+.icon-chat::before {
+  content: "\e97b";
+}
+
+.icon-facebook::before {
+  content: "\e931";
+}
+
+.icon-instagram::before {
+  content: "\eab5";
+}
+
+.icon-twitter::before {
+  content: "\eab1";
+}
+
+.icon-youtube::before {
+  content: "\eab3";
+}
+
+.icon-search::before {
+  content: "\e931";
+}
+
+.icon-goal::before {
+  content: "\e969";
+}
+
+.icon-products::before {
+  content: "\e989";
+}
+
+.icon-buy::before {
+  content: "\ea7f";
+}
+
+.icon-funds::before {
+  content: "\e913";
+}
+
+.icon-services::before {
+  content: "\e911";
+}
+
+.icon-about::before {
+  content: "\e98a";
+}
+
+.icon-contact::before {
+  content: "\e90f";
+}
+
+.icon-nav-logo::before {
+  content: "\e917";
+}
+
+.icon svg {
+  display: none;
+}
+
+/* Custom columns */
+.col-1by4,
+.col-1by2 {
+  display: flex;
+}
+
+.col-1by2 > div {
+  width: 50%;
+}
+
+.col-1by4 > div {
+  width: 25%;
+}
+
+.col-1by4 > div:last-child {
+  width: 75%;
+}
+
+@media (max-width: 900px) {
+  .col-1by4,
+  .col-1by2 {
+    display: block;
+  }
+
+  .col-1by4 > div,
+  .col-1by2 > div,
+  .col-1by4 > div:last-child {
+    width: 100%;
+  }
 }
 
 /* Custom styles */
@@ -413,41 +533,55 @@ header, main, footer {
 } 
 
 main {
-  padding: 80px 0 0 30px;
+  padding: 80px 30px 0;
+}
+
+.desktop-hide {
+  display: none;
 }
 
 @media (max-width: 768px) {
   main, footer {
-    padding: 60px 20px 0;
     width: 100%;
-    margin: 0 !important;
+    margin: 0;
+  }
+
+  main {
+    padding: 60px 20px 0;
+  }
+
+  footer {
+    padding: 60px 0 0 20px;
+  }
+
+  .desktop-hide {
+    display: block;
   }
 }
 
 /* User Profile section */
-.userprofile {
-  margin-left: -30px !important;
-  padding: 0 !important;
+.section.userprofile {
+  margin: 0 -30px;
+  padding: 0;
 }
 
 .userprofile .columns-img-col {
-  width: calc(50px + 25%) !important;
-  max-height: 400px;
   height: 400px;
   flex: unset;
-  background-color: #202336;
+  background-color: var(--icon-color-dark);
   float: left;
+  width: 436px;
 }
 
 .userprofile .columns-img-col img {
   position: relative;
-    left: auto;
-    top: auto;
-    bottom: auto;
-    width: 100%;
-    height: 100%;
-    transform: none;
-    object-fit: cover;
+  left: auto;
+  top: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  transform: none;
+  object-fit: cover;
 }
 
 .aboutme .columns > div > div,
@@ -456,14 +590,14 @@ main {
 }
 
 .userprofile .columns-2-cols > div > div ~ div {
-  background-color: #0000c1;
+  background-color: var(--color-medium-blue);
   padding: 40px;
-  color: #fff;
+  color: var(--color-white);
   float: left;
   flex: unset;
   width: calc(60px + 75%) !important;
-  margin-left: -30px !important;
-  height: 320px;
+  margin-left: -31px !important;
+  height: 400px;
 }
 
 .aboutme h2,
@@ -475,8 +609,8 @@ main {
   font-size: 2rem;
   line-height: 3.125rem;
   word-break: break-word;
-  font-weight: 300;
-  color: #fff;
+  font-weight: var(--font-weight-thin);
+  color: var(--color-white);
   max-height: 210px;
   padding-bottom: 0.5rem;
   margin: 0 0 20px;
@@ -488,22 +622,32 @@ main {
   font-size: .875rem;
   font-weight: normal;
   line-height: 1.43;
-  color: #282b3e;
+  color: var(--color-base-primary);
   word-break: break-word;
   padding: 0;
+}
+
+.facebook-chat .tile-body-wrapper p {
+  margin: 0;
+  display: contents;
 }
 
 .userprofile .columns-2-cols > div > div ~ div p {
   word-break: break-word;
     font-size: 1.125rem;
-    font-weight: 300;
+    font-weight: var(--font-weight-thin);
     line-height: 1.44;
-    color: #fff;
+    color: var(--color-white);
     max-height: 104px;
     margin: 0;
 }
 
 @media (max-width: 768px) {
+  .aboutme .columns > div > div,
+  .followme .columns > div > div {
+    padding: 0;
+  }
+
   .userprofile .columns-img-col,
   .userprofile .columns-2-cols > div > div ~ div {
     width: 100% !important;
@@ -511,7 +655,7 @@ main {
 
   .userprofile .columns-2-cols > div > div ~ div  {
     height: auto;
-    padding: 30px 20px;
+    padding: 30px !important;
     margin: 0 !important;
   }
 }
@@ -519,14 +663,21 @@ main {
 /* About-me & Follow-me section */
 .section {
   padding: 50px 0;
+  clear: both;
+}
+
+@media (max-width: 768px) {
+  .section {
+    display: flow-root;
+  }
 }
 
 .aboutme h3,
 .followme h3 {
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   line-height: 1.63;
-  color: #282b3e;
+  color: var(--color-base-primary);
   max-height: 52px;
   overflow: hidden;
   padding: 0;
@@ -549,72 +700,12 @@ main {
   height: 80px;
   display: block;
   font-size: 80px;
-  color: #202336;
-}
-
-.aboutme .icon-userlogin::before {
-  content: "\e927";
-}
-
-.aboutme .icon-award::before {
-  content: "\e9ba";
-}
-
-.aboutme .icon svg,
-.followme .icon svg {
-  display: none;
+  color: var(--icon-color-dark);
 }
 
 .followme .icon {
   font-size: 50px;
   height: 50px;
-}
-
-.followme .icon-facebook::before {
-  content: "\e931";
-}
-
-.followme .icon-instagram::before {
-  content: "\eab5";
-}
-
-.followme .button-container {
-  color: #282b3e;
-  display: inline-block;
-  font-size: .875rem;
-  font-weight: 600;
-}
-
-.followme .button-container a {
-  margin: 0;
-  padding: 5px 0 5px 35px;
-  font-weight: normal;
-  line-height: 1.43;
-  display: inline-block;
-  font-size: .875rem;
-  color: #282b3e !important;
-  text-decoration: none;
-  border: 0;
-  cursor: pointer;
-  letter-spacing: normal;
-  background: none;
-  position: relative;
-}
-
-.followme .button-container a::before {
-  font-family: 'Manulife JH Sans',static-icons,sans-serif !important;
-  content: "\e933";
-  color: #ec6453;
-  font-size: 20px;
-  position: absolute;
-  width: 28px;
-  height: 28px;
-  left: 0;
-  top: -1px;
-}
-
-.followme .button-container a:hover::before {
-  font-size: 23px;
 }
 
 /* Contact form block */
@@ -625,7 +716,83 @@ main {
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
-  font-weight: 600;
+  font-weight: var(--font-weight-bolder);
   font-size: 1.375rem;
   line-height: 2rem;
+}
+
+@media (max-width: 768px) {
+  .contactform h3 {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+/* Facebook chat section */
+.section.tiles-container.facebook-chat {
+  padding: 50px 0;
+}
+
+.facebook-chat .tiles-wrapper {
+  min-height: 110px;
+}
+
+.facebook-chat .tile-container {
+  height: 110px;
+}
+
+.facebook-chat .tile,
+.facebook-chat .tile-body .tile-body-wrapper {
+  padding: 0;
+}
+
+.facebook-chat .tile-bg-white {
+  border: 1px solid var(--border-color);
+}
+
+.facebook-chat .tile-body {
+  padding: 0;
+  margin: 30px 0 0 30px;
+}
+
+.facebook-chat .tile-body-wrapper .icon {
+  font-size: 50px;
+  color: var(--icon-color-dark);
+  position: relative;
+  bottom: auto;
+  float: left;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child {
+  width: 85%;
+  font-weight: var(--font-weight-bolder);
+  line-height: 1.63;
+  color: var(--color-base-primary);
+  letter-spacing: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0 30px;
+  position:unset;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
+  position: relative;
+  font-family: var(--font-family-txticon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\e903";
+  color: var(--link-color-secondary);
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  right: 0;
+  top: 2px;
+  float: right;
 }

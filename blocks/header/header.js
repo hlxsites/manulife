@@ -85,7 +85,8 @@ function toggleMenu(nav, navSections, forceExpanded = null) {
   }
 }
 
-function mobileNavClick() {
+function mobileNavClick(e) {
+  e.preventDefault();
   const body = document.querySelector('body');
   if (body.classList.contains('is-open-menu')) {
     body.classList.remove('is-open-menu');
@@ -100,13 +101,15 @@ function mobileNav(header) {
 
   const mobLogo = document.createElement('a');
   mobLogo.id = 'mob-nav-logo';
-  mobLogo.className = 'icon';
+  mobLogo.className = 'icon icon-nav-logo';
+  mobLogo.setAttribute('aria-label', 'Home');
   mobLogo.href = '/';
   mobNav.append(mobLogo);
 
   const manuLifeLogo = document.createElement('a');
   manuLifeLogo.id = 'nav-logo-manulife';
   manuLifeLogo.className = 'icon';
+  manuLifeLogo.setAttribute('aria-label', 'Manulife');
   manuLifeLogo.href = '/';
   mobNav.append(manuLifeLogo);
 
@@ -117,14 +120,20 @@ function mobileNav(header) {
   const signInLink = document.createElement('a');
   signInLink.href = signIn.href;
   signInLink.className = 'icon nav-mob-user';
+  signInLink.setAttribute('aria-label', 'User Signin');
   const signInImg = document.createElement('img');
   signInImg.src = '/styles/icons/icon-user.svg';
+  signInImg.width = 20;
+  signInImg.height = 20;
+  signInImg.alt = 'User Signin';
   signInLink.append(signInImg);
   toolContainer.append(signInLink);
 
   const mobMenu = document.createElement('a');
   mobMenu.className = 'icon nav-mob-menu';
-  mobMenu.addEventListener('click', () => mobileNavClick());
+  mobMenu.setAttribute('aria-label', 'Menu');
+  mobMenu.href = 'about:blank';
+  mobMenu.addEventListener('click', (e) => mobileNavClick(e));
   const mobMenuSpan = document.createElement('span');
   mobMenu.append(mobMenuSpan);
   toolContainer.append(mobMenu);
@@ -137,9 +146,21 @@ function mobileNav(header) {
 function decorateNavigation(nav) {
   const navLogo = document.createElement('a');
   navLogo.id = 'nav-logo';
-  navLogo.className = 'icon';
+  navLogo.className = 'icon icon-nav-logo';
+  navLogo.setAttribute('aria-label', 'Home');
   navLogo.href = '/';
   nav.prepend(navLogo);
+
+  const mainListContainer = nav.querySelector('.nav-top-left > ul');
+  const searchContainer = document.createElement('li');
+  searchContainer.classList.add('desktop-hide');
+  const searchLink = document.createElement('a');
+  searchLink.classList = 'nav-search';
+  searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
+  searchLink.innerText = 'Search';
+  searchContainer.append(searchLink);
+  mainListContainer.prepend(searchContainer);
+
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
   mainLinks.forEach((a) => {
     const linkText = a.text;
@@ -147,7 +168,7 @@ function decorateNavigation(nav) {
       a.className = 'hide';
     } else {
       const c = linkText.split(' ');
-      const clsName = `icon nav-icon-${c[0].toLowerCase()}`;
+      const clsName = `icon icon-${c[0].toLowerCase()}`;
 
       const navIcon = document.createElement('span');
       navIcon.className = '';
@@ -195,6 +216,16 @@ export default async function decorate(block) {
 
     const navSections = nav.querySelector('.nav-tools');
     if (navSections) {
+      // Search handling
+      const searchIcon = navSections.querySelector('.icon-search');
+      const searchLink = document.createElement('a');
+      searchLink.classList = 'nav-search';
+      searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
+      searchLink.setAttribute('aria-label', 'Search');
+      const searchParent = searchIcon.parentElement;
+      searchLink.append(searchIcon);
+      searchParent.append(searchLink);
+
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
         navSection.addEventListener('click', () => {
