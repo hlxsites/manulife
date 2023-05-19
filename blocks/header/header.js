@@ -205,6 +205,16 @@ export default async function decorate(block) {
 
     const navSections = nav.querySelector('.nav-tools');
     if (navSections) {
+      // Search handling
+      const searchIcon = navSections.querySelector('.icon-search');
+      console.log(searchIcon);
+      const searchLink = document.createElement('a');
+      searchLink.classList = 'nav-search';
+      searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
+      const searchParent = searchIcon.parentElement;
+      searchLink.append(searchIcon);
+      searchParent.append(searchLink);
+
       navSections.querySelectorAll(':scope > ul > li').forEach((navSection) => {
         if (navSection.querySelector('ul')) navSection.classList.add('nav-drop');
         navSection.addEventListener('click', () => {

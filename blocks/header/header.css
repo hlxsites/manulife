@@ -98,6 +98,10 @@ header .nav-wrapper .nav-brand {
   font-size: 20px;
 }
 
+.nav-tools a:hover .icon-search::before {
+  color: var(--link-color-secondary);
+}
+
 .nav-tools .icon-search::before {
   color: var(--color-cool-gray);
 }
