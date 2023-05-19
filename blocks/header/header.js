@@ -221,6 +221,7 @@ export default async function decorate(block) {
       const searchLink = document.createElement('a');
       searchLink.classList = 'nav-search';
       searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
+      searchLink.setAttribute('aria-label', 'Search');
       const searchParent = searchIcon.parentElement;
       searchLink.append(searchIcon);
       searchParent.append(searchLink);
