@@ -113,6 +113,7 @@
 
   /* fonts */
   --font-family-body: 'Manulife JH Sans',sans-serif;
+  --font-family-style: 'Manulife JH Serif',serif;
   --font-family-txticon: 'Manulife JH Sans',static-icons,sans-serif;
   --font-family-icon: manulife-icons,sans-serif;
 
@@ -219,7 +220,7 @@ header {
 
 i, em,
 b, strong {
-  font-family: var(--font-family-body);
+  font-family: var(--font-family-style);
 }
 
 /* Headings */
