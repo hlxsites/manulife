@@ -93,17 +93,18 @@ header .nav-wrapper .nav-brand {
   color: var(--color-white);
 }
 
-.nav-tools .icon-search {
+.nav-tools .icon-search,
+.nav-top-left .icon-search {
   font-family: var(--font-family-txticon);
   font-size: 20px;
 }
 
-.nav-tools a:hover .icon-search::before {
-  color: var(--link-color-secondary);
-}
-
 .nav-tools .icon-search::before {
   color: var(--color-cool-gray);
+}
+
+.nav-tools a:hover .icon-search::before {
+  color: var(--link-color-secondary);
 }
 
 .nav-top-left ul {

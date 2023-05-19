@@ -535,6 +535,10 @@ main {
   padding: 80px 30px 0;
 }
 
+.desktopHide {
+  display: none;
+}
+
 @media (max-width: 768px) {
   main, footer {
     width: 100%;
@@ -547,6 +551,10 @@ main {
 
   footer {
     padding: 60px 0 0 20px;
+  }
+
+  .desktopHide {
+    display: block;
   }
 }
 

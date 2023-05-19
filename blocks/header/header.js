@@ -150,6 +150,17 @@ function decorateNavigation(nav) {
   navLogo.setAttribute('aria-label', 'Home');
   navLogo.href = '/';
   nav.prepend(navLogo);
+
+  const mainListContainer = nav.querySelector('.nav-top-left > ul');
+  const searchContainer = document.createElement('li');
+  searchContainer.classList.add('desktopHide');
+  const searchLink = document.createElement('a');
+  searchLink.classList = 'nav-search';
+  searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
+  searchLink.innerText = 'Search';
+  searchContainer.append(searchLink);
+  mainListContainer.prepend(searchContainer);
+
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
   mainLinks.forEach((a) => {
     const linkText = a.text;
@@ -207,7 +218,6 @@ export default async function decorate(block) {
     if (navSections) {
       // Search handling
       const searchIcon = navSections.querySelector('.icon-search');
-      console.log(searchIcon);
       const searchLink = document.createElement('a');
       searchLink.classList = 'nav-search';
       searchLink.href = 'https://www.manulife.com.ph/search-results-page.html?query=';
