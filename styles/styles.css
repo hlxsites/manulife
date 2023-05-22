@@ -540,6 +540,21 @@ main {
   display: none;
 }
 
+.section > div {
+  padding: 50px 0;
+  clear: both;
+}
+
+.section.no-gap > div {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .section {
+    display: flow-root;
+  }
+}
+
 @media (max-width: 768px) {
   main, footer {
     width: 100%;
@@ -643,8 +658,8 @@ main {
 }
 
 @media (max-width: 768px) {
-  .aboutme .columns > div > div,
-  .followme .columns > div > div {
+  .columns.aboutme > div > div,
+  .columns.followme > div > div {
     padding: 0;
   }
 
@@ -661,17 +676,6 @@ main {
 }
 
 /* About-me & Follow-me section */
-.section {
-  padding: 50px 0;
-  clear: both;
-}
-
-@media (max-width: 768px) {
-  .section {
-    display: flow-root;
-  }
-}
-
 .aboutme h3,
 .followme h3 {
   font-size: 1rem;
@@ -688,8 +692,8 @@ main {
   list-style: none;
 }
 
-.aboutme .columns > div > div:first-child,
-.followme .columns > div > div:first-child {
+.columns.aboutme > div > div:first-child,
+.columns.followme > div > div:first-child {
   width: 23%;
   flex: unset;
   padding-right: 0;
@@ -709,10 +713,6 @@ main {
 }
 
 /* Contact form block */
-.section.contactform {
-  padding: 0;
-}
-
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
@@ -729,6 +729,10 @@ main {
 }
 
 /* Facebook chat section */
+.tiles.facebook-chat {
+  min-height: 110px;
+}
+
 .section.tiles-container.facebook-chat {
   padding: 50px 0;
 }
