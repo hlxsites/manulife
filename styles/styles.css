@@ -514,10 +514,6 @@ main {
   clear: both;
 }
 
-.section.no-gap > div {
-  padding: 0;
-}
-
 @media (max-width: 768px) {
   main, footer {
     width: 100%;
@@ -570,6 +566,10 @@ main {
   .col-1by4 > div:last-child {
     width: 100%;
   }
+}
+
+.section.no-gap > div {
+  padding: 0;
 }
 
 /* User Profile section */
