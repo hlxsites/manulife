@@ -133,6 +133,8 @@ async function createForm(formURL) {
   const resp = await fetch(pathname);
   const json = await resp.json();
   const form = document.createElement('form');
+  const formFieldsContainer = document.createElement('div');
+  formFieldsContainer.className = 'form-fields-container';
   const rules = [];
   // eslint-disable-next-line prefer-destructuring
   form.dataset.action = pathname.split('.json')[0];
@@ -175,8 +177,9 @@ async function createForm(formURL) {
         console.warn(`Invalid Rule ${fd.Rules}: ${e}`);
       }
     }
-    form.append(fieldWrapper);
+    formFieldsContainer.append(fieldWrapper);
   });
+  form.append(formFieldsContainer);
   form.addEventListener('change', () => applyRules(form, rules));
   applyRules(form, rules);
   fill(form);
