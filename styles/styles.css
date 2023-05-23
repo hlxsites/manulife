@@ -10,7 +10,7 @@
  * governing permissions and limitations under the License.
  */
 
- /* Manulife JH Sans */
+/* Manulife JH Sans */
 @font-face {
   font-family: 'Manulife JH Sans';
   src: url('fonts/ManulifeJHSans-Light.eot');
@@ -75,7 +75,7 @@
   font-display: block;
 }
 
- :root {
+:root {
   /* colors */
   --color-base-primary: #282b3e;
   --color-base-secondary: #dc5a44;
@@ -112,10 +112,10 @@
   --tile-shadow-color: #0003;
 
   /* fonts */
-  --font-family-body: 'Manulife JH Sans',sans-serif;
-  --font-family-style: 'Manulife JH Serif',serif;
-  --font-family-txticon: 'Manulife JH Sans',static-icons,sans-serif;
-  --font-family-icon: manulife-icons,sans-serif;
+  --font-family-body: 'Manulife JH Sans', sans-serif;
+  --font-family-style: 'Manulife JH Serif', serif;
+  --font-family-txticon: 'Manulife JH Sans', static-icons, sans-serif;
+  --font-family-icon: manulife-icons, sans-serif;
 
   /* body sizes */
   --body-font-size-m: 22px;
@@ -196,7 +196,9 @@ html {
   box-sizing: border-box;
 }
 
-*,*::before,*::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -218,8 +220,10 @@ header {
   height: var(--nav-height);
 }
 
-i, em,
-b, strong {
+i,
+em,
+b,
+strong {
   font-family: var(--font-family-style);
 }
 
@@ -245,15 +249,20 @@ h2 {
   line-height: 2.625rem;
 }
 
-p, dl, ol, ul, pre, blockquote {
+p,
+dl,
+ol,
+ul,
+pre,
+blockquote {
   margin-top: 1em;
   margin-bottom: 1em;
 }
 
-blockquote + blockquote,
-blockquote + h2,
-h2 + blockquote,
-h2 + h2 {
+blockquote+blockquote,
+blockquote+h2,
+h2+blockquote,
+h2+h2 {
   font-size: 1.375rem;
   line-height: 2rem;
 }
@@ -290,10 +299,10 @@ h6 {
     line-height: 2rem;
   }
 
-  blockquote + blockquote,
-  blockquote + h2,
-  h2 + blockquote,
-  h2 + h2 {
+  blockquote+blockquote,
+  blockquote+h2,
+  h2+blockquote,
+  h2+h2 {
     font-size: 1.375rem;
     line-height: 2rem;
   }
@@ -326,7 +335,8 @@ hr {
   border-bottom: 1px solid var(--overlay-background-color);
 }
 
-code, samp {
+code,
+samp {
   padding: .125em;
 }
 
@@ -499,38 +509,41 @@ main img {
   display: flex;
 }
 
-.col-1by2 > div {
+.col-1by2>div {
   width: 50%;
 }
 
-.col-1by4 > div {
+.col-1by4>div {
   width: 25%;
 }
 
-.col-1by4 > div:last-child {
+.col-1by4>div:last-child {
   width: 75%;
 }
 
 @media (max-width: 900px) {
+
   .col-1by4,
   .col-1by2 {
     display: block;
   }
 
-  .col-1by4 > div,
-  .col-1by2 > div,
-  .col-1by4 > div:last-child {
+  .col-1by4>div,
+  .col-1by2>div,
+  .col-1by4>div:last-child {
     width: 100%;
   }
 }
 
 /* Custom styles */
-header, main, footer {
+header,
+main,
+footer {
   /* width: calc(100% - 80px); */
   margin-left: 80px;
   transition: transform 500ms ease;
   padding: 0 0 0 30px;
-} 
+}
 
 main {
   padding: 80px 30px 0;
@@ -541,7 +554,9 @@ main {
 }
 
 @media (max-width: 768px) {
-  main, footer {
+
+  main,
+  footer {
     width: 100%;
     margin: 0;
   }
@@ -584,12 +599,12 @@ main {
   object-fit: cover;
 }
 
-.aboutme .columns > div > div,
-.followme .columns > div > div {
+.aboutme .columns>div>div,
+.followme .columns>div>div {
   padding-right: 75px;
 }
 
-.userprofile .columns-2-cols > div > div ~ div {
+.userprofile .columns-2-cols>div>div~div {
   background-color: var(--color-medium-blue);
   padding: 40px;
   color: var(--color-white);
@@ -605,7 +620,7 @@ main {
   padding-left: 10px;
 }
 
-.userprofile .columns-2-cols > div > div ~ div h2 {
+.userprofile .columns-2-cols>div>div~div h2 {
   font-size: 2rem;
   line-height: 3.125rem;
   word-break: break-word;
@@ -632,28 +647,42 @@ main {
   display: contents;
 }
 
-.userprofile .columns-2-cols > div > div ~ div p {
+.userprofile .columns-2-cols>div>div~div p {
   word-break: break-word;
-    font-size: 1.125rem;
-    font-weight: var(--font-weight-thin);
-    line-height: 1.44;
-    color: var(--color-white);
-    max-height: 104px;
-    margin: 0;
+  font-size: 1.125rem;
+  font-weight: var(--font-weight-thin);
+  line-height: 1.44;
+  color: var(--color-white);
+  max-height: 104px;
+  margin: 0;
+}
+
+.userprofile .columns-img-col>picture::after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #282b3e;
+  opacity: .2;
+  pointer-events: none;
 }
 
 @media (max-width: 768px) {
-  .aboutme .columns > div > div,
-  .followme .columns > div > div {
+
+  .aboutme .columns>div>div,
+  .followme .columns>div>div {
     padding: 0;
   }
 
   .userprofile .columns-img-col,
-  .userprofile .columns-2-cols > div > div ~ div {
+  .userprofile .columns-2-cols>div>div~div {
     width: 100% !important;
   }
 
-  .userprofile .columns-2-cols > div > div ~ div  {
+  .userprofile .columns-2-cols>div>div~div {
     height: auto;
     padding: 30px !important;
     margin: 0 !important;
@@ -688,8 +717,8 @@ main {
   list-style: none;
 }
 
-.aboutme .columns > div > div:first-child,
-.followme .columns > div > div:first-child {
+.aboutme .columns>div>div:first-child,
+.followme .columns>div>div:first-child {
   width: 23%;
   flex: unset;
   padding-right: 0;
@@ -775,7 +804,7 @@ main {
   font-size: 1rem;
   display: inline-block;
   padding: 0 30px;
-  position:unset;
+  position: unset;
 }
 
 .facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
