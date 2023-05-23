@@ -64,7 +64,7 @@
   width: 100%;
   background-color: transparent;
   border: 1px dashed #8e90a2;
-  border-color: transparent transparent #8e90a2 transparent;
+  border-color: transparent transparent #8e90a2;
   cursor: pointer;
   padding: 6px 16px 6px 0;
 }

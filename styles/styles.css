@@ -522,7 +522,6 @@ main img {
 }
 
 @media (max-width: 900px) {
-
   .col-1by4,
   .col-1by2 {
     display: block;
@@ -554,7 +553,6 @@ main {
 }
 
 @media (max-width: 768px) {
-
   main,
   footer {
     width: 100%;
@@ -671,7 +669,6 @@ main {
 }
 
 @media (max-width: 768px) {
-
   .aboutme .columns>div>div,
   .followme .columns>div>div {
     padding: 0;
