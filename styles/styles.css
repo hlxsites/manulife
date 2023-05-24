@@ -685,7 +685,6 @@ main {
 @media (max-width: 768px) {
   .columns.aboutme > div > div,
   .columns.followme > div > div {
-
     padding: 0;
   }
 
