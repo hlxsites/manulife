@@ -1,125 +1,75 @@
-main .form {
-    background-color: white;
-    padding: var(--spacing-m);
-    box-shadow: 0 1px 6px rgb(34 34 34 / 10%);
-  }
-  
-  main .form h2 {
-    padding: var(--spacing-m) 0;
-    font-size: var(--type-heading-l-lh);
-    font-weight: normal;
-  }
-  
-  main .form h3 {
-    padding-top: var(--spacing-m);
-    font-size: var(--type-heading-m-size);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  main .form input,
-  main .form textarea,
-  main .form select {
-    border: 1px solid rgb(193 193 195);
-    padding: 11px;
-    border-radius: 0;
-    width: 100%;
-    max-width: 50rem;
-    box-sizing: border-box;
-    margin-top: 4px;
-  }
-  
-  main .form textarea {
-    min-height: 100px;
-  }
-  
-  main .form input:hover,
-  main .form select:hover {
-    border-color: rgb(90 92 96);
-  }
-  
-  main .form label {
-    width: 100%;
-    display: block;
-    font-size: var(--type-body-s-size);
-    line-height: var(--type-body-s-lh);
-    padding-bottom: var(--spacing-xs);
-    text-transform: uppercase;
-    box-sizing: border-box;
-    font-weight: 800;
-  }
-  
-  main .form label.required::after {
-    content: "*";
-    color: red;
-    padding-left: 5px;
-  }
-  
-  main .form .field-wrapper {
-    margin-bottom: 20px;
-  }
-  
-  main .form .form-checkbox-wrapper {
-    display: flex;
-    margin: var(--spacing-s) 0;
-  }
-  
-  main .form .form-checkbox-wrapper input[type='checkbox'] {
-    appearance: none;
-  
-    /* stylelint-disable */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-  
-    /* stylelint-enable */
-    height: 30px;
-    width: 30px;
-    position: relative;
-    border: unset;
-    padding: unset;
-    margin-right: 5px;
-    margin-left: 0;
-  }
-  
-  main .form .form-checkbox-wrapper input[type='checkbox']::after {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 30px;
-    width: 30px;
-    content: ' ';
-    background: url('./checkbox.svg');
-    background-size: contain;
-  }
-  
-  main .form .form-checkbox-wrapper input[type='checkbox']:checked::after {
-    background: url('./checkbox-checked.svg');
-    background-size: contain;
-    content: ' ';
-  }
-  
-  main .form .form-checkbox-wrapper label {
-    font-size: var(--type-body-m-size);
-    line-height: var(--type-body-m-lh);
-    font-weight: normal;
-    text-transform: none;
-    display: block;
-  }
-  
-  main .form .button {
-    cursor: pointer;
-    background: rgb(20 115 230);
-    color: white;
-    border-radius: 16px;
-    font-size: var(--type-body-s-size);
-    font-weight: 300;
-    padding: 6px 16px;
-    border: none;
-    font-family: adobe-clean, 'Trebuchet MS', sans-serif;
-  }
-  
-  main .form .form-submit-wrapper {
-    display: flex;
-    justify-content: flex-end;
-  }
+.form-wrapper .button-container {
+  display: block;
+}
+
+.form-wrapper form {
+  display: flex;
+  flex-flow: column;
+  outline: 0;
+  line-height: 1.31;
+}
+
+/* Form columns */
+.field-col-half {
+  width: 50%;
+  float: left;
+}
+
+.field-col-onethird {
+  width: 33%;
+  float: left;
+}
+
+.field-col-twothird {
+  width: 67%;
+  float: left;
+}
+
+.field-wrapper {
+  padding: 20px 10px;
+}
+
+.field-wrapper label {
+  width: 100%;
+  font-size: .875rem;
+  font-weight: normal;
+  line-height: 1.43;
+  color: #5e6073;
+}
+
+.field-wrapper input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  padding-right: 20px;
+  color: #282b3e;
+  border: 0;
+  border-bottom: solid 1px #8e90a2;
+  background-color: transparent;
+  border-radius: 0;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+.field-wrapper select {
+  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.44;
+  letter-spacing: normal;
+  color: #8e90a2;
+  width: 100%;
+  background-color: transparent;
+  border: 1px dashed #8e90a2;
+  border-color: transparent transparent #8e90a2;
+  cursor: pointer;
+  padding: 6px 16px 6px 0;
+}
+
+.field-wrapper input:focus,
+.field-wrapper select:focus {
+  outline: none;
+}
