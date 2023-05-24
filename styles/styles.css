@@ -503,37 +503,6 @@ main img {
   display: none;
 }
 
-/* Custom columns */
-.col-1by4,
-.col-1by2 {
-  display: flex;
-}
-
-.col-1by2>div {
-  width: 50%;
-}
-
-.col-1by4>div {
-  width: 25%;
-}
-
-.col-1by4>div:last-child {
-  width: 75%;
-}
-
-@media (max-width: 900px) {
-  .col-1by4,
-  .col-1by2 {
-    display: block;
-  }
-
-  .col-1by4>div,
-  .col-1by2>div,
-  .col-1by4>div:last-child {
-    width: 100%;
-  }
-}
-
 /* Custom styles */
 header,
 main,
@@ -552,6 +521,11 @@ main {
   display: none;
 }
 
+.section > div {
+  padding: 50px 0;
+  clear: both;
+}
+
 @media (max-width: 768px) {
   main,
   footer {
@@ -567,9 +541,48 @@ main {
     padding: 60px 0 0 20px;
   }
 
+  .section {
+    display: flow-root;
+  }
+
   .desktop-hide {
     display: block;
   }
+}
+
+/* Custom columns */
+.col-1by4,
+.col-1by2 {
+  display: flex;
+}
+
+.col-1by2 > div {
+  width: 50%;
+}
+
+.col-1by4 > div {
+  width: 25%;
+}
+
+.col-1by4 > div:last-child {
+  width: 75%;
+}
+
+@media (max-width: 900px) {
+  .col-1by4,
+  .col-1by2 {
+    display: block;
+  }
+
+  .col-1by4 > div,
+  .col-1by2 > div,
+  .col-1by4 > div:last-child {
+    width: 100%;
+  }
+}
+
+.section.no-gap > div {
+  padding: 0;
 }
 
 /* User Profile section */
@@ -670,8 +683,9 @@ main {
 }
 
 @media (max-width: 768px) {
-  .aboutme .columns>div>div,
-  .followme .columns>div>div {
+  .columns.aboutme > div > div,
+  .columns.followme > div > div {
+
     padding: 0;
   }
 
@@ -688,17 +702,6 @@ main {
 }
 
 /* About-me & Follow-me section */
-.section {
-  padding: 50px 0;
-  clear: both;
-}
-
-@media (max-width: 768px) {
-  .section {
-    display: flow-root;
-  }
-}
-
 .aboutme h3,
 .followme h3 {
   font-size: 1rem;
@@ -715,8 +718,8 @@ main {
   list-style: none;
 }
 
-.aboutme .columns>div>div:first-child,
-.followme .columns>div>div:first-child {
+.columns.aboutme > div > div:first-child,
+.columns.followme > div > div:first-child {
   width: 23%;
   flex: unset;
   padding-right: 0;
@@ -736,10 +739,6 @@ main {
 }
 
 /* Contact form block */
-.section.contactform {
-  padding: 0;
-}
-
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
@@ -756,6 +755,10 @@ main {
 }
 
 /* Facebook chat section */
+.tiles.facebook-chat {
+  min-height: 110px;
+}
+
 .section.tiles-container.facebook-chat {
   padding: 50px 0;
 }
