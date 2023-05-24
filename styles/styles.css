@@ -584,6 +584,7 @@ main {
   background-color: var(--icon-color-dark);
   float: left;
   width: 436px;
+  position: relative;
 }
 
 .userprofile .columns-img-col img {
