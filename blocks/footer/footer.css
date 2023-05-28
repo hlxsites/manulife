@@ -130,11 +130,6 @@
 }
 
 @media (max-width: 768px) {
-  .footer .columns > div > div > ul li a {
-    font-size: .875rem;
-    line-height: 2.86;
-  }
-
   .foot-social > div > div {
     margin: 20px 0;
   }
@@ -193,8 +188,14 @@
   }
 
   .footer-links ul li {
+    margin: 0;
+  }
+
+  .footer .footer-links.columns > div > div > ul li a {
     line-height: 1.43;
     padding-top: 30px;
+    margin: 0;
+    display: inline-block;
   }
 
   .footer-links ul li:last-child {
@@ -203,11 +204,6 @@
 
   .footer .foot-social {
     padding: 0;
-  }
-
-  .foot-social .icon::before {
-    top: -35px;
-    position: relative;
   }
 }
 
