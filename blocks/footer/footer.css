@@ -162,7 +162,7 @@
   .footer-links label::after {
     font-family: var(--font-family-txticon);
     content: "\e90f";
-    color: #787a86;
+    color: var(--color-light-gray);
     font-size: 6px;
     width: 9px;
     height: 6px;
@@ -173,7 +173,7 @@
 
   .footer-links input:checked~label::after {
     content: "\e910";
-    color: #fff;
+    color: var(--color-white);
   }
 
   .footer .footer-links label p {
@@ -184,14 +184,14 @@
     line-height: 28px;
     box-sizing: border-box;
     display: none;
-    background-color: #34384A;
+    background-color: var(--footer-mobile-bg-color);
     margin: 0 0 0 -20px;
     width: 110%;
   }
 
   .footer-links input:checked~ul {
     height: auto;
-    color: #fff;
+    color: var(--color-white);
     font-size: 16px;
     padding: 0 20px;
     transition: 0.5s;

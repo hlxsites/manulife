@@ -2,8 +2,6 @@ import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
 function constructMobileFooter(footer) {
   footer.querySelectorAll('.footer-links > div > div > p').forEach((footHeading, index) => {
-    console.log(footHeading);
-
     const parent = footHeading.parentElement;
     const id = `footer-links-${index}`;
 

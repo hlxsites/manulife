@@ -9,72 +9,6 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-
-/* Manulife JH Sans */
-@font-face {
-  font-family: 'Manulife JH Sans';
-  src: url('fonts/ManulifeJHSans-Light.eot');
-  src: url('fonts/ManulifeJHSans-Light.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Light.woff2') format('woff2'), url('fonts/ManulifeJHSans-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manulife JH Sans';
-  src: url('fonts/ManulifeJHSans-Regular.eot');
-  src: url('fonts/ManulifeJHSans-Regular.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Regular.woff2') format('woff2'), url('fonts/ManulifeJHSans-Regular.woff') format('woff');
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manulife JH Sans';
-  src: url('fonts/ManulifeJHSans-Demibold.eot');
-  src: url('fonts/ManulifeJHSans-Demibold.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Demibold.woff2') format('woff2'), url('fonts/ManulifeJHSans-Demibold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Manulife JH Sans';
-  src: url('fonts/ManulifeJHSans-Bold.eot');
-  src: url('fonts/ManulifeJHSans-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSans-Bold.woff2') format('woff2'), url('fonts/ManulifeJHSans-Bold.woff') format('woff');
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* Manulife JH Serif */
-@font-face {
-  font-family: 'Manulife JH Serif';
-  src: url('fonts/ManulifeJHSerif-Italic.eot');
-  src: url('fonts/ManulifeJHSerif-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/ManulifeJHSerif-Italic.woff2') format('woff2'), url('fonts/ManulifeJHSerif-Italic.woff') format('woff');
-  font-weight: 400;
-  font-style: italic;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: manulife-icons;
-  src: url('fonts/icons/manulife-icons.eot?pt8i22');
-  src: url('fonts/icons/manulife-icons.eot?pt8i22#iefix') format('embedded-opentype'), url('fonts/icons/manulife-icons.ttf?pt8i22') format('truetype'), url('fonts/icons/manulife-icons.woff?pt8i22') format('woff'), url('fonts/icons/manulife-icons.svg?pt8i22#manulife-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
-@font-face {
-  font-family: static-icons;
-  src: url('fonts/icons/static-icons.eot?r0zl90');
-  src: url('fonts/icons/static-icons.eot?r0zl90#iefix') format('embedded-opentype'), url('fonts/icons/static-icons.ttf?r0zl90') format('truetype'), url('fonts/icons/static-icons.woff?r0zl90') format('woff'), url('fonts/icons/static-icons.svg?r0zl90#static-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
-}
-
 :root {
   /* colors */
   --color-base-primary: #282b3e;
@@ -92,11 +26,13 @@
   --color-bright-gray: #eee;
   --color-brighter-grey: #ededed;
   --color-cool-gray: #8e90a2;
+  --color-light-gray: #787a86;
   --color-charcoal: #34384b;
   --color-jade: #00a758;
   --color-dark-green: #1a1c28;
   --color-crayola: #2f3246;
   --color-orange: #ffa500;
+  --color-burgundy: #34384A;
 
   /* Theme color variables */
   --background-color: var(--color-lotion);
@@ -109,6 +45,7 @@
   --nav-bg: var(--color-crayola);
   --border-color: var(--color-brighter-grey);
   --footer-social-border-color: var(--color-charcoal);
+  --footer-mobile-bg-color: var(--color-burgundy);
   --tile-shadow-color: #0003;
 
   /* fonts */
@@ -122,14 +59,6 @@
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 48px;
-  --heading-font-size-xl: 40px;
-  --heading-font-size-l: 32px;
-  --heading-font-size-m: 24px;
-  --heading-font-size-s: 20px;
-  --heading-font-size-xs: 18px;
-
   /* nav height */
   --nav-height: 64px;
 
@@ -140,23 +69,6 @@
   --font-weight-bolder: 600;
   --font-weight-boldest: 700;
   --font-weight-heavy: 900;
-
-  /* font sizes */
-  --font-size-50: 0.5rem;
-  --font-size-75: 0.75rem;
-  --font-size-80: 0.8rem;
-  --font-size-90: 0.9rem;
-  --font-size-100: 1rem;
-  --font-size-120: 1.20rem;
-  --font-size-125: 1.25rem;
-  --font-size-130: 1.3rem;
-  --font-size-150: 1.5rem;
-  --font-size-175: 1.75rem;
-  --font-size-180: 1.75rem;
-  --font-size-185: 1.85rem;
-  --font-size-200: 2rem;
-  --font-size-215: 2.15rem;
-  --font-size-250: 2.5rem;
 }
 
 /* Fonts */
@@ -166,17 +78,6 @@
 /* Preferred encoding for web pages */
 
 /* import font from web; still to explore optimal location for font files */
-
-@media (min-width: 900px) {
-  :root {
-    --heading-font-size-xxl: 60px;
-    --heading-font-size-xl: 48px;
-    --heading-font-size-l: 36px;
-    --heading-font-size-m: 30px;
-    --heading-font-size-s: 24px;
-    --heading-font-size-xs: 22px;
-  }
-}
 
 @media (max-width: 1920px) {
   html {
