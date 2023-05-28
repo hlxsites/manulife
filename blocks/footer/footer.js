@@ -1,5 +1,26 @@
 import { readBlockConfig, decorateIcons } from '../../scripts/lib-franklin.js';
 
+function constructMobileFooter(footer) {
+  footer.querySelectorAll('.footer-links > div > div > p').forEach((footHeading, index) => {
+    console.log(footHeading);
+
+    const parent = footHeading.parentElement;
+    const id = `footer-links-${index}`;
+
+    const label = document.createElement('label');
+    label.classList.add('icon');
+    label.classList.add('icon-arrow');
+    label.htmlFor = id;
+    label.appendChild(footHeading);
+    parent.prepend(label);
+
+    const checkbox = document.createElement('input');
+    checkbox.type = 'checkbox';
+    checkbox.id = id;
+    parent.prepend(checkbox);
+  });
+}
+
 /**
  * loads and decorates the footer
  * @param {Element} block The footer block element
@@ -39,6 +60,8 @@ export default async function decorate(block) {
         });
       }
     });
+
+    constructMobileFooter(footer);
 
     decorateIcons(footer);
     block.append(footer);
