@@ -130,7 +130,7 @@
 }
 
 @media (max-width: 768px) {
-  .footer a {
+  .footer .columns > div > div > ul li a {
     font-size: .875rem;
     line-height: 2.86;
   }
@@ -138,14 +138,8 @@
   .foot-social > div > div {
     margin: 20px 0;
   }
-}
 
-/* Mobile links as accordion */
-.footer-links input {
-  display: none;
-}
-
-@media (max-width: 769px) {
+  /* Mobile links as accordion */
   .footer-links label {
     cursor: pointer;
     width: 100%;
@@ -215,4 +209,8 @@
     top: -35px;
     position: relative;
   }
+}
+
+.footer-links input {
+  display: none;
 }
