@@ -639,6 +639,13 @@ main {
   height: 50px;
 }
 
+@media (max-width: 768px) {
+  .columns.aboutme > div > div:first-child,
+  .columns.followme > div > div:first-child {
+    width: 100%;
+  }
+}
+
 /* Contact form block */
 .contactform h3 {
   margin: 0;
@@ -726,4 +733,19 @@ main {
   right: 0;
   top: 2px;
   float: right;
+}
+
+/* Extra large view port */
+@media (min-width: 1920px) {
+  header, footer {
+    padding: 0 50px;
+  }
+
+  main {
+    padding: 80px 50px 0;
+  }
+
+  .section.userprofile {
+    margin: 0 -50px;
+  }
 }
