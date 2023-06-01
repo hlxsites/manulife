@@ -344,3 +344,14 @@ header .nav-wrapper .nav-brand {
   transform: rotate(90deg);
   transition: top 500ms ease, transform 500ms ease 500ms;
 }
+
+/* Extra large view port */
+@media (min-width: 1920px) {
+  .userprofile .columns-img-col {
+    width: 500px;
+  }
+
+  .nav-tools > ul {
+    padding-right: 10px;
+  }
+}
