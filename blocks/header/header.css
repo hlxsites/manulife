@@ -46,7 +46,7 @@ header .nav-wrapper .nav-brand {
   color: var(--color-base-primary);
 }
 
-ul.primaryNav > li a {
+ul.primary-nav > li a {
   padding: 20px 0;
     color: var(--color-white);
     font-size: .71rem;
@@ -135,19 +135,19 @@ ul.primaryNav > li a {
   width: 100%;
 }
 
-ul.primaryNav > li { 
+ul.primary-nav > li { 
   text-align: center;
   border-bottom: solid 1px var(--nav-bg);
   height: 80px;
   cursor: pointer;
 }
 
-ul.primaryNav > li:hover {
+ul.primary-nav > li:hover {
   background-color: var(--color-base-primary);
   color: var(--color-white);  
 }
 
-ul.primaryNav > li:hover ul.subNav{
+ul.primary-nav > li:hover ul.sub-nav{
   display: block;
 }
 
@@ -157,7 +157,7 @@ ul.primaryNav > li:hover ul.subNav{
   font-size: 20px;
 }
 
-ul.subNav {
+ul.sub-nav {
   display: none;
   top:0;
   position: fixed;
@@ -167,7 +167,7 @@ ul.subNav {
   width: 400px;
 }
 
-ul.subNav li{
+ul.sub-nav li{
   padding:0 60px;
   text-align: left;
   border-bottom: 1px solid var(--color-brighter-grey);
@@ -177,7 +177,7 @@ ul.subNav li{
   position: relative;
 }
 
-ul.subNav li::before{
+ul.sub-nav li::before{
   content: '';
   height: 100%;
   width: 0;  
@@ -188,16 +188,16 @@ ul.subNav li::before{
   left: 0
 }
 
-ul.subNav li:hover::before{
+ul.sub-nav li:hover::before{
   width: 100%;
 }
 
-ul.subNav li:first-child:hover::before{
+ul.sub-nav li:first-child:hover::before{
   width: 0;
 }
 
 
-ul.subNav li:first-child a{
+ul.sub-nav li:first-child a{
     max-height: 80px;
     color: transparent;
     display: block;
@@ -208,7 +208,7 @@ ul.subNav li:first-child a{
     padding: 0;
 }
 
-ul.subNav > li a {
+ul.sub-nav > li a {
   color: var(--color-base-primary);
   font-size: 1rem;
   line-height: 24px;
@@ -270,7 +270,7 @@ ul.subNav > li a {
     background-color: var(--color-white);
   }
 
-  ul.primaryNav > li {
+  ul.primary-nav > li {
     height: 70px;
     display: flex;
     border-bottom: 1px solid var(--border-color);
@@ -280,11 +280,11 @@ ul.subNav > li a {
     text-align: left;
   }
 
-  ul.primaryNav > li:hover {
+  ul.primary-nav > li:hover {
     background-color: var(--color-white);
   }
 
-  ul.primaryNav > li a {
+  ul.primary-nav > li a {
     color: var(--color-base-primary);
     font-size: 1rem;
     line-height: 16px;
@@ -295,7 +295,7 @@ ul.subNav > li a {
     position: relative;
   }
 
-  ul.primaryNav > li a span.icon {
+  ul.primary-nav > li a span.icon {
     margin: 25px 20px;
     opacity: 1;
     display: inline-block;
