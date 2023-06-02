@@ -147,16 +147,6 @@ ul.primary-nav > li:hover {
   color: var(--color-white);  
 }
 
-ul.primary-nav > li:hover ul.sub-nav{
-  display: block;
-}
-
-.nav-top-left a > span.icon {
-  display: block;
-  margin: 0 auto 10px;
-  font-size: 20px;
-}
-
 ul.sub-nav {
   display: none;
   top:0;
@@ -165,6 +155,16 @@ ul.sub-nav {
   background: var(--color-white);
   height: 100%;
   width: 400px;
+}
+
+ul.primary-nav > li:hover ul.sub-nav{
+  display: block;
+}
+
+.nav-top-left a > span.icon {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 20px;
 }
 
 ul.sub-nav li{
@@ -201,7 +201,7 @@ ul.sub-nav li:first-child a{
     max-height: 80px;
     color: transparent;
     display: block;
-    background: url(/styles/icons/Manulife-logo.svg) no-repeat;
+    background: url('/styles/icons/Manulife-logo.svg') no-repeat;
     background-size: auto 22px;
     width: 120px;
     font-size: 0;
