@@ -53,28 +53,6 @@ ul.primary-nav > li a {
     display: block;
 }
 
-ul.sub-nav > li a {
-  color: var(--color-base-primary);
-  font-size: 1rem;
-  line-height: 24px;
-  opacity: 1;
-  z-index:1;
-  width:100%;
-  align-items:center;
-  display:flex;
-}
-
-ul.sub-nav li:first-child a{
-  max-height: 80px;
-  color: transparent;
-  display: block;
-  background: url('/styles/icons/Manulife-logo.svg') no-repeat;
-  background-size: auto 22px;
-  width: 120px;
-  font-size: 0;
-  padding: 0;
-}
-
 .nav-tools > ul > li:last-child a {
   height: 0;
   min-width: 40px;
@@ -157,6 +135,38 @@ ul.sub-nav li:first-child a{
   width: 100%;
 }
 
+ul.primary-nav > li { 
+  text-align: center;
+  border-bottom: solid 1px var(--nav-bg);
+  height: 80px;
+  cursor: pointer;
+}
+
+ul.primary-nav > li:hover {
+  background-color: var(--color-base-primary);
+  color: var(--color-white);  
+}
+
+ul.primary-nav > li:hover ul.sub-nav{
+  display: block;
+}
+
+.nav-top-left a > span.icon {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 20px;
+}
+
+ul.sub-nav {
+  display: none;
+  top:0;
+  position: fixed;
+  left: 80px;
+  background: var(--color-white);
+  height: 100%;
+  width: 400px;
+}
+
 ul.sub-nav li{
   padding:0 60px;
   text-align: left;
@@ -187,26 +197,26 @@ ul.sub-nav li:first-child:hover::before{
 }
 
 
-ul.primary-nav > li { 
-  text-align: center;
-  border-bottom: solid 1px var(--nav-bg);
-  height: 80px;
-  cursor: pointer;
+ul.sub-nav li:first-child a{
+    max-height: 80px;
+    color: transparent;
+    display: block;
+    background: url(/styles/icons/Manulife-logo.svg) no-repeat;
+    background-size: auto 22px;
+    width: 120px;
+    font-size: 0;
+    padding: 0;
 }
 
-ul.primary-nav > li:hover {
-  background-color: var(--color-base-primary);
-  color: var(--color-white);  
-}
-
-ul.primary-nav > li:hover ul.sub-nav{
-  display: block;
-}
-
-.nav-top-left a > span.icon {
-  display: block;
-  margin: 0 auto 10px;
-  font-size: 20px;
+ul.sub-nav > li a {
+  color: var(--color-base-primary);
+  font-size: 1rem;
+  line-height: 24px;
+  opacity: 1;
+  z-index:1;
+  width:100%;
+  align-items:center;
+  display:flex;
 }
 
 .nav-mob {
