@@ -53,7 +53,7 @@ ul.primary-nav > li a {
     display: block;
 }
 
-.nav-tools > ul > li:last-child a {
+.nav-tools > ul.primary-nav > li:last-child a {
   height: 0;
   min-width: 40px;
     width: auto;
@@ -76,7 +76,7 @@ ul.primary-nav > li a {
     user-select: none;
 }
 
-.nav-tools > ul > li:last-child a:hover {
+.nav-tools > ul.primary-nav > li:last-child a:hover {
   background-color: var(--color-base-secondary);
   color: var(--color-white);
 }
@@ -101,8 +101,7 @@ ul.primary-nav > li a {
   padding: 0;
 }
 
-.nav-tools .icon-search svg,
-.nav-tools > ul > li > ul {
+.nav-tools .icon-search svg {
   display: none;
 }
 
@@ -157,6 +156,17 @@ ul.sub-nav {
   width: 400px;
 }
 
+ul.sub-nav li::before{
+  content: '';
+  height: 100%;
+  width: 0;  
+  background-color: var(--color-lotion); 
+  transition: all ease .5s;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
 ul.primary-nav > li:hover ul.sub-nav{
   display: block;
 }
@@ -175,17 +185,6 @@ ul.sub-nav li{
   min-height: 80px;
   align-items: center;
   position: relative;
-}
-
-ul.sub-nav li::before{
-  content: '';
-  height: 100%;
-  width: 0;  
-  background-color: var(--color-lotion); 
-  transition: all ease .5s;
-  position: absolute;
-  top: 0;
-  left: 0
 }
 
 ul.sub-nav li:hover::before{
