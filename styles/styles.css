@@ -9,7 +9,7 @@
  * OF ANY KIND, either express or implied. See the License for the specific language
  * governing permissions and limitations under the License.
  */
-:root {
+ :root {
   /* colors */
   --color-base-primary: #282b3e;
   --color-base-secondary: #dc5a44;
@@ -33,6 +33,7 @@
   --color-crayola: #2f3246;
   --color-orange: #ffa500;
   --color-burgundy: #34384A;
+  --color-comet: #5e6073;
 
   /* Theme color variables */
   --background-color: var(--color-lotion);
@@ -60,7 +61,7 @@
   --body-font-size-xs: 16px;
 
   /* nav height */
-  --nav-height: 64px;
+  --nav-height: 80px;
 
   /* font weights */
   --font-weight-thin: 300;
@@ -118,7 +119,16 @@ body {
 }
 
 header {
+  background-color: rgba(255 255 255 / 95%);
+  box-shadow: 0 8px 20px 0 rgba(0 0 0 / 1%);
+  z-index: 1001;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   height: var(--nav-height);
+  height: 80px;
+  align-items: center;
 }
 
 i,
@@ -138,6 +148,7 @@ h6 {
   word-wrap: break-word;
   line-height: 1;
   font-weight: var(--font-weight-thin);
+  padding-left: 10px;
 }
 
 h1 {
@@ -529,11 +540,6 @@ main {
   height: 400px;
 }
 
-.aboutme h2,
-.followme h2 {
-  padding-left: 10px;
-}
-
 .userprofile .columns-2-cols>div>div~div h2 {
   font-size: 2rem;
   line-height: 3.125rem;
@@ -541,7 +547,7 @@ main {
   font-weight: var(--font-weight-thin);
   color: var(--color-white);
   max-height: 210px;
-  padding-bottom: 0.5rem;
+  padding: 0 0 8px;
   margin: 0 0 20px;
 }
 
@@ -647,6 +653,20 @@ main {
 }
 
 /* Contact form block */
+.section.form-container > div.form-wrapper {
+  padding: 0 0 0 10px;
+}
+
+.section.form-container > div.default-content-wrapper {
+  padding: 0;
+}
+
+.section.form-container > div.default-content-wrappe h4 {
+  letter-spacing: 0;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
 .contactform h3 {
   margin: 0;
   padding-top: 10px;
