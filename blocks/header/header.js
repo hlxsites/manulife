@@ -160,7 +160,19 @@ function decorateNavigation(nav) {
   searchLink.innerText = 'Search';
   searchContainer.append(searchLink);
   mainListContainer.prepend(searchContainer);
-
+  const mainNavEle = nav.querySelector('.nav-top-left > ul');
+  mainNavEle.classList.add('primaryNav');
+  const subNavEle = nav.querySelectorAll('.nav-top-left > ul li >ul');
+  subNavEle.forEach((subNav)=>{
+    subNav.classList.add('subNav');
+    const anchor = document.createElement('a');
+    anchor.classList.add('logo');
+    anchor.setAttribute('href', '/');
+    anchor.textContent = 'Manulife';
+    const listItem = document.createElement('li');
+    listItem.appendChild(anchor);
+    subNav.insertBefore(listItem, subNav.firstChild);
+  });
   const mainLinks = nav.querySelectorAll('.nav-top-left > ul > li > a');
   mainLinks.forEach((a) => {
     const linkText = a.text;
