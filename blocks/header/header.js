@@ -163,7 +163,7 @@ function decorateNavigation(nav) {
   const mainNavEle = nav.querySelector('.nav-top-left > ul');
   mainNavEle.classList.add('primaryNav');
   const subNavEle = nav.querySelectorAll('.nav-top-left > ul li >ul');
-  subNavEle.forEach((subNav)=>{
+  subNavEle.forEach((subNav) => {
     subNav.classList.add('subNav');
     const anchor = document.createElement('a');
     anchor.classList.add('logo');
