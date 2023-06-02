@@ -161,10 +161,10 @@ function decorateNavigation(nav) {
   searchContainer.append(searchLink);
   mainListContainer.prepend(searchContainer);
   const mainNavEle = nav.querySelector('.nav-top-left > ul');
-  mainNavEle.classList.add('primaryNav');
+  mainNavEle.classList.add('primary-nav');
   const subNavEle = nav.querySelectorAll('.nav-top-left > ul li >ul');
   subNavEle.forEach((subNav) => {
-    subNav.classList.add('subNav');
+    subNav.classList.add('sub-nav');
     const anchor = document.createElement('a');
     anchor.classList.add('logo');
     anchor.setAttribute('href', '/');
