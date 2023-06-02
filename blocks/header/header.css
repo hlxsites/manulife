@@ -53,6 +53,28 @@ ul.primary-nav > li a {
     display: block;
 }
 
+ul.sub-nav > li a {
+  color: var(--color-base-primary);
+  font-size: 1rem;
+  line-height: 24px;
+  opacity: 1;
+  z-index:1;
+  width:100%;
+  align-items:center;
+  display:flex;
+}
+
+ul.sub-nav li:first-child a{
+  max-height: 80px;
+  color: transparent;
+  display: block;
+  background: url('/styles/icons/Manulife-logo.svg') no-repeat;
+  background-size: auto 22px;
+  width: 120px;
+  font-size: 0;
+  padding: 0;
+}
+
 .nav-tools > ul.primary-nav > li:last-child a {
   height: 0;
   min-width: 40px;
@@ -141,6 +163,16 @@ ul.primary-nav > li {
   cursor: pointer;
 }
 
+ul.sub-nav li{
+  padding:0 60px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-brighter-grey);
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  position: relative;
+}
+
 ul.primary-nav > li:hover {
   background-color: var(--color-base-primary);
   color: var(--color-white);  
@@ -177,15 +209,6 @@ ul.primary-nav > li:hover ul.sub-nav{
   font-size: 20px;
 }
 
-ul.sub-nav li{
-  padding:0 60px;
-  text-align: left;
-  border-bottom: 1px solid var(--color-brighter-grey);
-  display: flex;
-  min-height: 80px;
-  align-items: center;
-  position: relative;
-}
 
 ul.sub-nav li:hover::before{
   width: 100%;
@@ -195,28 +218,6 @@ ul.sub-nav li:first-child:hover::before{
   width: 0;
 }
 
-
-ul.sub-nav li:first-child a{
-    max-height: 80px;
-    color: transparent;
-    display: block;
-    background: url('/styles/icons/Manulife-logo.svg') no-repeat;
-    background-size: auto 22px;
-    width: 120px;
-    font-size: 0;
-    padding: 0;
-}
-
-ul.sub-nav > li a {
-  color: var(--color-base-primary);
-  font-size: 1rem;
-  line-height: 24px;
-  opacity: 1;
-  z-index:1;
-  width:100%;
-  align-items:center;
-  display:flex;
-}
 
 .nav-mob {
   display: none;
