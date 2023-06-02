@@ -68,7 +68,7 @@ ul.sub-nav li:first-child a{
   max-height: 80px;
   color: transparent;
   display: block;
-  background: url(/styles/icons/Manulife-logo.svg) no-repeat;
+  background: url('/styles/icons/Manulife-logo.svg') no-repeat;
   background-size: auto 22px;
   width: 120px;
   font-size: 0;
