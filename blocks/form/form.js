@@ -83,6 +83,16 @@ function createInput(fd) {
   return input;
 }
 
+function createCheckboxLabel(fd) {
+  const label = document.createElement('label');
+  label.setAttribute('for', fd.Field);
+  label.classList.add('form-checkbox-label');
+  if (fd.Mandatory === 'x') {
+    label.classList.add('required');
+  }
+  return label;
+}
+
 function createTextArea(fd) {
   const input = document.createElement('textarea');
   input.id = fd.Field;
@@ -155,6 +165,7 @@ async function createForm(formURL) {
         break;
       case 'checkbox':
         fieldWrapper.append(createInput(fd));
+        fieldWrapper.append(createCheckboxLabel(fd));
         fieldWrapper.append(createLabel(fd));
         break;
       case 'text-area':
