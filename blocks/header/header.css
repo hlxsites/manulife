@@ -1,16 +1,4 @@
 /* Header layout */
-header {
-  background-color: rgba(255 255 255 / 95%);
-    box-shadow: 0 8px 20px 0 rgba(0 0 0 / 1%);
-    z-index: 1001;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    height: 80px;
-    align-items: center;
-}
-
 header .header {
   width: 100%;
     height: 80px;
@@ -343,4 +331,15 @@ header .nav-wrapper .nav-brand {
   top: 0;
   transform: rotate(90deg);
   transition: top 500ms ease, transform 500ms ease 500ms;
+}
+
+/* Extra large view port */
+@media (min-width: 1920px) {
+  .userprofile .columns-img-col {
+    width: 500px;
+  }
+
+  .nav-tools > ul {
+    padding-right: 10px;
+  }
 }
