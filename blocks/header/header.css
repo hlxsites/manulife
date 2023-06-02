@@ -135,38 +135,6 @@ ul.primary-nav > li a {
   width: 100%;
 }
 
-ul.primary-nav > li { 
-  text-align: center;
-  border-bottom: solid 1px var(--nav-bg);
-  height: 80px;
-  cursor: pointer;
-}
-
-ul.primary-nav > li:hover {
-  background-color: var(--color-base-primary);
-  color: var(--color-white);  
-}
-
-ul.primary-nav > li:hover ul.sub-nav{
-  display: block;
-}
-
-.nav-top-left a > span.icon {
-  display: block;
-  margin: 0 auto 10px;
-  font-size: 20px;
-}
-
-ul.sub-nav {
-  display: none;
-  top:0;
-  position: fixed;
-  left: 80px;
-  background: var(--color-white);
-  height: 100%;
-  width: 400px;
-}
-
 ul.sub-nav li{
   padding:0 60px;
   text-align: left;
@@ -218,6 +186,30 @@ ul.sub-nav > li a {
   align-items:center;
   display:flex;
 }
+
+ul.primary-nav > li { 
+  text-align: center;
+  border-bottom: solid 1px var(--nav-bg);
+  height: 80px;
+  cursor: pointer;
+}
+
+ul.primary-nav > li:hover {
+  background-color: var(--color-base-primary);
+  color: var(--color-white);  
+}
+
+ul.primary-nav > li:hover ul.sub-nav{
+  display: block;
+}
+
+.nav-top-left a > span.icon {
+  display: block;
+  margin: 0 auto 10px;
+  font-size: 20px;
+}
+
+
 
 .nav-mob {
   display: none;
