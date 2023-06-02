@@ -64,6 +64,17 @@ ul.sub-nav > li a {
   display:flex;
 }
 
+ul.sub-nav li:first-child a{
+  max-height: 80px;
+  color: transparent;
+  display: block;
+  background: url(/styles/icons/Manulife-logo.svg) no-repeat;
+  background-size: auto 22px;
+  width: 120px;
+  font-size: 0;
+  padding: 0;
+}
+
 .nav-tools > ul > li:last-child a {
   height: 0;
   min-width: 40px;
@@ -175,16 +186,6 @@ ul.sub-nav li:first-child:hover::before{
   width: 0;
 }
 
-ul.sub-nav li:first-child a{
-  max-height: 80px;
-  color: transparent;
-  display: block;
-  background: url(/styles/icons/Manulife-logo.svg) no-repeat;
-  background-size: auto 22px;
-  width: 120px;
-  font-size: 0;
-  padding: 0;
-}
 
 ul.primary-nav > li { 
   text-align: center;
@@ -207,8 +208,6 @@ ul.primary-nav > li:hover ul.sub-nav{
   margin: 0 auto 10px;
   font-size: 20px;
 }
-
-
 
 .nav-mob {
   display: none;
