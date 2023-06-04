@@ -235,14 +235,6 @@ ul.sub-nav li:first-child:hover::before{
 
 /* Mobile Header and Nav */
 @media (max-width: 768px) {
-  header,
-  .nav-top-left,
-  .nav-top-left #nav-logo {
-    visibility: hidden;
-    width: 0;
-    display: none;
-  }
-
   .nav-mob {
     display: flex;
   }
