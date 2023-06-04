@@ -29,4 +29,13 @@
     flex: 1;
     order: unset;
   }
+
+  .columns > div > div:nth-child(2) {
+    width: 44.4444%;
+  }
+
+  .columns > div > div:last-child {
+    margin-left: 11.111%;
+    width: 44.4444%;
+  }
 }

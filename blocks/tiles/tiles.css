@@ -144,13 +144,24 @@
   cursor: auto;
   margin-top: -15px;
   margin-bottom: 15px;
-  box-shadow: 0 12px 16px var(--tile-shadow-color);
+  box-shadow:0 5px 10px 0 rgb(40 43 62 / 15%)
 }
 
 .tile:hover .tile-image {
   margin-top: -15px;
   transition: all .25s;
-  box-shadow: 0 12px 16px var(--tile-shadow-color);
+  box-shadow:0 5px 10px 0 rgb(40 43 62 / 15%)
+}
+
+.tile .tile-image picture::before {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  opacity: .4;
+  background-color: #282b3e;
 }
 
 .no-effect .tile:hover .tile-container {
