@@ -75,7 +75,7 @@ ul.sub-nav li:first-child a{
   padding: 0;
 }
 
-.nav-tools > ul.primary-nav > li:last-child a {
+.nav-tools > ul > li:last-child a {
   height: 0;
   min-width: 40px;
     width: auto;
@@ -98,7 +98,7 @@ ul.sub-nav li:first-child a{
     user-select: none;
 }
 
-.nav-tools > ul.primary-nav > li:last-child a:hover {
+.nav-tools > ul > li:last-child a:hover {
   background-color: var(--color-base-secondary);
   color: var(--color-white);
 }
@@ -123,7 +123,7 @@ ul.sub-nav li:first-child a{
   padding: 0;
 }
 
-.nav-tools .icon-search svg {
+.nav-tools .icon-search svg,.nav-tools > ul > li > ul {
   display: none;
 }
 
@@ -245,6 +245,10 @@ ul.sub-nav li:first-child:hover::before{
 
   .nav-mob {
     display: flex;
+  }
+
+  ul.primary-nav > li:hover ul.sub-nav{
+    display: none;
   }
 
   .is-open-menu {
