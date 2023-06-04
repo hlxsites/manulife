@@ -38,6 +38,7 @@
 .footer .foot-primary > div > div {
   float: left;
   width: 25%;
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -53,6 +54,7 @@
 }
 
 .footer .footer-links p {
+  font-family: var(--font-family-body);
   font-size: .625rem;
   height: 0.625rem;
   line-height: 1;
@@ -97,7 +99,7 @@
 
 .footer ul {
   margin: 0;
-  padding: 0;
+  padding: 1px 0 0;
   list-style: none;
 }
 

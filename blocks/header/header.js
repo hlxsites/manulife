@@ -152,6 +152,9 @@ function decorateNavigation(nav) {
   nav.prepend(navLogo);
 
   const mainListContainer = nav.querySelector('.nav-top-left > ul');
+  mainListContainer.classList.add('primary-nav');
+
+  /* Mobile nav - Search Link */
   const searchContainer = document.createElement('li');
   searchContainer.classList.add('desktop-hide');
   const searchLink = document.createElement('a');
@@ -160,8 +163,8 @@ function decorateNavigation(nav) {
   searchLink.innerText = 'Search';
   searchContainer.append(searchLink);
   mainListContainer.prepend(searchContainer);
-  const mainNavEle = nav.querySelector('.nav-top-left > ul');
-  mainNavEle.classList.add('primary-nav');
+
+  /* Desktop - 2nd Level Navigation */
   const subNavEle = nav.querySelectorAll('.nav-top-left > ul li >ul');
   subNavEle.forEach((subNav) => {
     subNav.classList.add('sub-nav');
@@ -188,6 +191,13 @@ function decorateNavigation(nav) {
       a.prepend(navIcon);
     }
   });
+
+  /* Mobile nav - Top Link 2 Column */
+  const businessLineContainer = document.createElement('li');
+  businessLineContainer.classList.add('desktop-hide');
+  businessLineContainer.classList.add('business-line');
+  businessLineContainer.innerHTML = '<ul><li><a href="https://www.manulife-chinabank.com.ph/MCB-Landing-Page">Manulife China Bank</a></li><li><a href="https://assetmanagement.manulife.com.ph/Home">Manulife Investment Management</a></li></ul>';
+  mainListContainer.prepend(businessLineContainer);
 }
 
 function decorateDOM() {
