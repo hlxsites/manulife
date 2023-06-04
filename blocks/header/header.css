@@ -46,11 +46,33 @@ header .nav-wrapper .nav-brand {
   color: var(--color-base-primary);
 }
 
-.nav-top-left ul > li a {
+ul.primary-nav > li a {
   padding: 20px 0;
     color: var(--color-white);
     font-size: .71rem;
     display: block;
+}
+
+ul.sub-nav > li a {
+  color: var(--color-base-primary);
+  font-size: 1rem;
+  line-height: 24px;
+  opacity: 1;
+  z-index:1;
+  width:100%;
+  align-items:center;
+  display:flex;
+}
+
+ul.sub-nav li:first-child a{
+  max-height: 80px;
+  color: transparent;
+  display: block;
+  background: url('/styles/icons/Manulife-logo.svg') no-repeat;
+  background-size: auto 22px;
+  width: 120px;
+  font-size: 0;
+  padding: 0;
 }
 
 .nav-tools > ul > li:last-child a {
@@ -101,8 +123,7 @@ header .nav-wrapper .nav-brand {
   padding: 0;
 }
 
-.nav-tools .icon-search svg,
-.nav-tools > ul > li > ul {
+.nav-tools .icon-search svg,.nav-tools > ul > li > ul {
   display: none;
 }
 
@@ -135,20 +156,51 @@ header .nav-wrapper .nav-brand {
   width: 100%;
 }
 
-.nav-top-left ul > li { 
+ul.primary-nav > li { 
   text-align: center;
   border-bottom: solid 1px var(--nav-bg);
   height: 80px;
   cursor: pointer;
 }
 
-.nav-top-left ul > li:hover {
-  background-color: var(--color-base-primary);
-    color: var(--color-white);
+ul.sub-nav li{
+  padding:0 60px;
+  text-align: left;
+  border-bottom: 1px solid var(--color-brighter-grey);
+  display: flex;
+  min-height: 80px;
+  align-items: center;
+  position: relative;
 }
 
-.nav-top-left ul > li > ul {
+ul.primary-nav > li:hover {
+  background-color: var(--color-base-primary);
+  color: var(--color-white);  
+}
+
+ul.sub-nav {
   display: none;
+  top:0;
+  position: fixed;
+  left: 80px;
+  background: var(--color-white);
+  height: 100%;
+  width: 400px;
+}
+
+ul.sub-nav li::before{
+  content: '';
+  height: 100%;
+  width: 0;  
+  background-color: var(--color-lotion); 
+  transition: all ease .5s;
+  position: absolute;
+  top: 0;
+  left: 0
+}
+
+ul.primary-nav > li:hover ul.sub-nav{
+  display: block;
 }
 
 .nav-top-left a > span.icon {
@@ -156,6 +208,16 @@ header .nav-wrapper .nav-brand {
   margin: 0 auto 10px;
   font-size: 20px;
 }
+
+
+ul.sub-nav li:hover::before{
+  width: 100%;
+}
+
+ul.sub-nav li:first-child:hover::before{
+  width: 0;
+}
+
 
 .nav-mob {
   display: none;
@@ -173,16 +235,12 @@ header .nav-wrapper .nav-brand {
 
 /* Mobile Header and Nav */
 @media (max-width: 768px) {
-  header,
-  .nav-top-left,
-  .nav-top-left #nav-logo {
-    visibility: hidden;
-    width: 0;
-    display: none;
-  }
-
   .nav-mob {
     display: flex;
+  }
+
+  ul.primary-nav > li:hover ul.sub-nav{
+    display: none;
   }
 
   .is-open-menu {
@@ -208,7 +266,7 @@ header .nav-wrapper .nav-brand {
     background-color: var(--color-white);
   }
 
-  .nav-top-left ul > li {
+  ul.primary-nav > li {
     height: 70px;
     display: flex;
     border-bottom: 1px solid var(--border-color);
@@ -218,11 +276,11 @@ header .nav-wrapper .nav-brand {
     text-align: left;
   }
 
-  .nav-top-left ul > li:hover {
+  ul.primary-nav > li:hover {
     background-color: var(--color-white);
   }
 
-  .nav-top-left ul > li a {
+  ul.primary-nav > li a {
     color: var(--color-base-primary);
     font-size: 1rem;
     line-height: 16px;
@@ -233,7 +291,7 @@ header .nav-wrapper .nav-brand {
     position: relative;
   }
 
-  .nav-top-left ul > li a span.icon {
+  ul.primary-nav > li a span.icon {
     margin: 25px 20px;
     opacity: 1;
     display: inline-block;

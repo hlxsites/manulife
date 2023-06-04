@@ -420,7 +420,6 @@ main img {
 header,
 main,
 footer {
-  /* width: calc(100% - 80px); */
   margin-left: 80px;
   transition: transform 500ms ease;
   padding: 0 0 0 30px;
@@ -440,6 +439,14 @@ main {
 }
 
 @media (max-width: 768px) {
+  header,
+  .nav-top-left,
+  .nav-top-left #nav-logo {
+    visibility: hidden;
+    width: 0;
+    display: none;
+  }
+
   main,
   footer {
     width: 100%;
@@ -586,12 +593,16 @@ main {
   right: 0;
   top: 0;
   bottom: 0;
-  background-color: #282b3e;
+  background-color: var(--color-base-primary);
   opacity: .2;
   pointer-events: none;
 }
 
 @media (max-width: 768px) {
+  .section.userprofile {
+    margin-right: -20px;
+  }
+
   .columns.aboutme > div > div,
   .columns.followme > div > div {
     padding: 0;
