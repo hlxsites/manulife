@@ -50,6 +50,7 @@
   --footer-social-border-color: var(--color-charcoal);
   --footer-mobile-bg-color: var(--color-burgundy);
   --tile-shadow-color: #0003;
+  --cta-button-bg-color: #DF2F1B;
 
   /* fonts */
   --font-family-body: 'Manulife JH Sans', sans-serif;

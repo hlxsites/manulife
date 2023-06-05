@@ -159,7 +159,7 @@ input[type="checkbox"]:checked+.form-checkbox-label::before {
   border: 0;
   cursor: pointer;
   color: var(--color-white);
-  background-color: var(--link-color-secondary);
+  background-color: var(--cta-button-bg-color);
   border-radius: 0;
   font-weight: var(--font-weight-bold);
   font-size: 18px;
