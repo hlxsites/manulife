@@ -62,6 +62,7 @@
   --body-font-size-m: 22px;
   --body-font-size-s: 18px;
   --body-font-size-xs: 16px;
+  --body-font-size-smallest: 10px;
 
   /* nav height */
   --nav-height: 80px;
