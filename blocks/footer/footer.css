@@ -33,6 +33,12 @@
 
 .footer .foot-social > div {
   margin: 0 40px;
+  gap: 0;
+  align-items: center;
+}
+
+.footer .foot-social > div > div:last-child {
+  margin-left: 0;
 }
 
 .footer .foot-primary > div > div {
@@ -55,14 +61,28 @@
 .footer .footer-links p {
   font-size: .625rem;
   height: 0.625rem;
-  line-height: 1;
+  line-height: 0;
   margin: 40px 0 10px;
+}
+
+.footer .footer-links >div {
+    gap: 0;
+}
+
+.footer .footer-links label >p {
+  font-family: var(--font-family-body);
+  font-size: calc(var(--body-font-size-smallest) - 0.6px);
+  font-weight: var(--font-weight-regular);
+}
+
+.footer .footer-links >div >div:last-child {
+    margin-left: 0;
 }
 
 .footer-links ul li {
   margin: 5px 0 0;
   padding: 0;
-  line-height: 1.43;
+  line-height: 0;
 }
 
 .footer .foot-social div > a {
@@ -82,7 +102,7 @@
 .footer .columns > div > div > ul li a {
   color: var(--color-white) !important;
   font-weight: var(--font-weight-regular);
-  font-size: .875rem;
+  font-size: calc(14px - 0.6px);
   line-height: 1.43;
 }
 
@@ -111,6 +131,7 @@
 .footer .foot-social > div > div > ul li {
   float: left;
   padding-right: 20px;
+  font-size: calc(14px - 0.6px);
 }
 
 .footer .foot-social div > a span {
@@ -122,11 +143,12 @@
 }
 
 .footer .foot-disc {
-    line-height: 1.33;
-    height: 1rem;
-    font-size: .75rem;
-    padding: 15px 0;
-    width: 70%;
+    line-height: 1.83;
+    font-size: calc(12px - 0.6px);
+    width: 66.66666667%;
+    margin: 0;
+    padding: 16px 0;
+    height: auto;
 }
 
 @media (max-width: 768px) {
