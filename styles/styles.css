@@ -27,6 +27,7 @@
   --color-brighter-grey: #ededed;
   --color-cool-gray: #8e90a2;
   --color-light-gray: #787a86;
+  --color-gray15: #262626;
   --color-charcoal: #34384b;
   --color-jade: #00a758;
   --color-dark-green: #1a1c28;
@@ -34,6 +35,7 @@
   --color-orange: #ffa500;
   --color-burgundy: #34384A;
   --color-comet: #5e6073;
+  --color-white-smoke: #f5f5f5;
 
   /* Theme color variables */
   --background-color: var(--color-lotion);
@@ -537,6 +539,12 @@ main {
   padding-right: 75px;
 }
 
+.columns.followme > div > div {
+  width: 15% !important;
+  margin-left: 0 !important;
+  flex: initial;
+}
+
 .userprofile .columns-2-cols>div>div~div {
   background-color: var(--color-medium-blue);
   padding: 40px;
@@ -606,6 +614,7 @@ main {
   .columns.aboutme > div > div,
   .columns.followme > div > div {
     padding: 0;
+    width: 100% !important;
   }
 
   .userprofile .columns-img-col,
@@ -617,6 +626,11 @@ main {
     height: auto;
     padding: 30px !important;
     margin: 0 !important;
+  }
+
+  .columns.followme > div > div > p {
+    width: 110px;
+    float: left;
   }
 }
 
@@ -639,7 +653,7 @@ main {
 
 .columns.aboutme > div > div:first-child,
 .columns.followme > div > div:first-child {
-  width: 23%;
+  width: 23% !important;
   flex: unset;
   padding-right: 0;
 }

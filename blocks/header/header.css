@@ -64,6 +64,49 @@ ul.sub-nav > li a {
   display:flex;
 }
 
+/* Mobile business line nav link */
+ul.primary-nav > li.business-line {
+  height: 82px;
+}
+
+.business-line ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.business-line ul li {
+  background-color: var(--background-color);
+  font-weight: 400;
+  width: 50%;
+  max-height: 80px;
+  overflow-y: hidden;
+  border: 1px solid var(--border-color);
+  display: table;
+  white-space: normal;
+}
+
+.business-line ul li a {
+  height: 80px;
+  width: 100%;
+  line-height: 1.43;
+  color: var(--color-base-primary);
+  font-weight: inherit;
+  font-size: 16px;
+  letter-spacing: normal;
+  text-align: center;
+  vertical-align: middle;
+  display: table-cell;
+}
+
+.business-line ul li a:hover, 
+.business-line ul li a:focus {
+  color: var(--color-gray15);
+  text-decoration: none;
+  background-color: var(--color-white-smoke);
+}
+
 ul.sub-nav li:first-child a{
   max-height: 80px;
   color: transparent;
@@ -113,7 +156,8 @@ ul.sub-nav li:first-child a{
   color: var(--color-cool-gray);
 }
 
-.nav-tools a:hover .icon-search::before {
+.nav-tools a:hover .icon-search::before,
+a.nav-search:hover .icon-search::before {
   color: var(--link-color-secondary);
 }
 
@@ -123,7 +167,8 @@ ul.sub-nav li:first-child a{
   padding: 0;
 }
 
-.nav-tools .icon-search svg,.nav-tools > ul > li > ul {
+.nav-tools .icon-search svg,
+.nav-tools > ul > li > ul {
   display: none;
 }
 
@@ -145,15 +190,17 @@ ul.sub-nav li:first-child a{
   display: inline-table;
 }
 
-.nav-top-left #nav-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: var(--nav-logo-color);
-  height: 80px;
-  font-size: 30px;
-  color: var(--color-white) !important;
-  width: 100%;
+@media (min-width: 769px) { 
+  .nav-top-left #nav-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--nav-logo-color);
+    height: 80px;
+    font-size: 30px;
+    color: var(--color-white) !important;
+    width: 100%;
+  }
 }
 
 ul.primary-nav > li { 
