@@ -189,6 +189,8 @@ function decorateNavigation(nav) {
       navIcon.className = '';
       navIcon.className = clsName;
       a.prepend(navIcon);
+
+      a.parentElement.classList.add(`subnav-${c[0].toLowerCase()}`);
     }
   });
 

@@ -243,11 +243,76 @@ ul.sub-nav li::before{
   transition: all ease .5s;
   position: absolute;
   top: 0;
-  left: 0
+  left: 0;
+  z-index: -1;
 }
 
 ul.primary-nav > li:hover ul.sub-nav{
   display: block;
+}
+
+ul.primary-nav li.subnav-products ul li:last-child {
+  display: block;
+  padding: 30px 60px;
+  font-family: var(--font-family-body);
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  color: var(--color-base-primary);
+}
+
+ul.primary-nav li.subnav-products ul li:last-child strong {
+  font-family: var(--font-family-body);
+    font-size: .8125rem;
+    border-radius: 2px;
+    border: 0.15rem solid var(--nav-logo-color);
+    color: var(--nav-logo-color);
+    padding: 0.1rem 0.5rem;
+    display: block;
+    font-weight: 600;
+    width: fit-content;
+    line-height: 16px;
+    min-height: 24px;
+}
+
+ul.primary-nav li.subnav-products ul li:last-child a {
+  display: inline-block;
+  align-items: center;
+  text-align: left;
+  text-decoration: none;
+  border: 0;
+  cursor: pointer;
+  font-size: .875rem;
+  line-height: 1.29;
+  letter-spacing: normal;
+  color: #282b3e;
+  position: relative;
+  padding-left: 30px;
+  font-weight: 600;
+}
+
+ul.primary-nav li.subnav-products ul li:last-child a::before {
+  content: "\e933";
+  color: var(--link-color-secondary);
+  font-family: var(--font-family-txticon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  left: 0;
+  top: 17px;
+  margin-top: 0;
+}
+
+ul.primary-nav li.subnav-products ul li:last-child a:hover::before {
+  font-size: 23px;
 }
 
 .nav-top-left a > span.icon {
