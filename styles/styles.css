@@ -600,6 +600,12 @@ main {
   pointer-events: none;
 }
 
+.columns.followme > div > div {
+  width: 15% !important;
+  margin-left: 0 !important;
+  flex: initial;
+}
+
 @media (max-width: 768px) {
   .section.userprofile {
     margin-right: -20px;
@@ -608,6 +614,7 @@ main {
   .columns.aboutme > div > div,
   .columns.followme > div > div {
     padding: 0;
+    width: 100% !important;
   }
 
   .userprofile .columns-img-col,
@@ -619,6 +626,11 @@ main {
     height: auto;
     padding: 30px !important;
     margin: 0 !important;
+  }
+
+  .columns.followme > div > div > p {
+    width: 110px;
+    float: left;
   }
 }
 
@@ -641,7 +653,7 @@ main {
 
 .columns.aboutme > div > div:first-child,
 .columns.followme > div > div:first-child {
-  width: 23%;
+  width: 23% !important;
   flex: unset;
   padding-right: 0;
 }

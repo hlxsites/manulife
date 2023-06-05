@@ -68,7 +68,7 @@
   font-stretch: normal;
   line-height: 1.44;
   letter-spacing: normal;
-  color: var(--color-cool-gray);
+  color: var(--color-base-primary);
   width: 100%;
   background-color: transparent;
   border: 1px dashed var(--color-cool-gray);

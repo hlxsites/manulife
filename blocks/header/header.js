@@ -110,7 +110,7 @@ function mobileNav(header) {
   manuLifeLogo.id = 'nav-logo-manulife';
   manuLifeLogo.className = 'icon';
   manuLifeLogo.setAttribute('aria-label', 'Manulife');
-  manuLifeLogo.href = '/';
+  manuLifeLogo.href = '#';
   mobNav.append(manuLifeLogo);
 
   const toolContainer = document.createElement('div');
