@@ -37,13 +37,17 @@
   align-items: center;
 }
 
-.footer .foot-social > div > div:last-child {
-  margin-left: 0;
+.footer .footer-links >div {
+    gap: 0;
 }
 
 .footer .foot-primary > div > div {
   float: left;
   width: 25%;
+}
+
+.footer .foot-social > div > div:last-child {
+  margin-left: 0;
 }
 
 @media (max-width: 768px) {
@@ -63,10 +67,6 @@
   height: 0.625rem;
   line-height: 0;
   margin: 40px 0 10px;
-}
-
-.footer .footer-links >div {
-    gap: 0;
 }
 
 .footer .footer-links label >p {
@@ -145,7 +145,7 @@
 .footer .foot-disc {
     line-height: 1.83;
     font-size: calc(12px - 0.6px);
-    width: 66.66666667%;
+    width: 66.6667%;
     margin: 0;
     padding: 16px 0;
     height: auto;
