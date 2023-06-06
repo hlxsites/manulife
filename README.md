@@ -4,6 +4,7 @@ Your project's description...
 ## Environments
 - Preview: https://main--manulife--hlxsites.hlx.page/
 - Live: https://main--manulife--hlxsites.hlx.live/
+- Profile: https://main--manulife--hlxsites.hlx.live/jennifer-alera
 
 ## Installation
 
