@@ -42,12 +42,15 @@
   height: 400px;
 }
 
+.hero-content a {
+  color: var(--color-white);
+}
+
 .hero-content h1 {
   font-size: 1.9rem;
   line-height: 3.125rem;
   word-break: break-word;
   font-weight: var(--font-weight-thin);
-  color: var(--color-white);
   max-height: 210px;
   padding: 0;
   margin: 0 0 25px;
@@ -59,7 +62,6 @@
   font-size: 1.125rem;
   font-weight: var(--font-weight-thin);
   line-height: 1.44;
-  color: var(--color-white);
   max-height: 104px;
   margin: 0;
 }
