@@ -24,7 +24,9 @@ function buildHeroContent(tag, container) {
   if (tag && tag.tagName.toLowerCase() === 'p') {
     const nextItem = tag.nextElementSibling;
     container.append(tag);
-    buildHeroContent(nextItem, container);
+    if (nextItem) {
+      buildHeroContent(nextItem, container);
+    }
   }
 }
 
@@ -36,7 +38,9 @@ function buildHeroBlock(main) {
   const heroContent = document.createElement('div');
   heroContent.classList.add('hero-content');
   const h1 = main.querySelector('h1');
-  buildHeroContent(h1.nextElementSibling, heroContent);
+  if (h1.nextElementSibling) {
+    buildHeroContent(h1.nextElementSibling, heroContent);
+  }
 
   const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
