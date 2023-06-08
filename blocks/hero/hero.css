@@ -99,6 +99,10 @@
     padding: 30px !important;
     margin: 0 !important;
   }
+
+  .hero-content p { 
+    max-height: unset;
+  }
 }
 
 /* Extra large view port */
