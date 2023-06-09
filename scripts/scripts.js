@@ -16,16 +16,38 @@ import {
 const LCP_BLOCKS = ['columns']; // add your LCP blocks to the list
 
 /**
+ * Finding and adding next p element in hero banner.
+ * @param {Element} tag Next tag element
+ * @param {Element} container Hero container element
+ */
+function buildHeroContent(tag, container) {
+  if (tag && tag.tagName.toLowerCase() === 'p') {
+    const nextItem = tag.nextElementSibling;
+    container.append(tag);
+    if (nextItem) {
+      buildHeroContent(nextItem, container);
+    }
+  }
+}
+
+/**
  * Builds hero block and prepends to main in a new section.
  * @param {Element} main The container element
  */
 function buildHeroBlock(main) {
+  const heroContent = document.createElement('div');
+  heroContent.classList.add('hero-content');
   const h1 = main.querySelector('h1');
+  if (h1.nextElementSibling) {
+    buildHeroContent(h1.nextElementSibling, heroContent);
+  }
+
   const picture = main.querySelector('picture');
   // eslint-disable-next-line no-bitwise
   if (h1 && picture && (h1.compareDocumentPosition(picture) & Node.DOCUMENT_POSITION_PRECEDING)) {
+    heroContent.prepend(h1);
     const section = document.createElement('div');
-    section.append(buildBlock('hero', { elems: [picture, h1] }));
+    section.append(buildBlock('hero', { elems: [picture, heroContent] }));
     main.prepend(section);
   }
 }
@@ -39,7 +61,7 @@ function buildAutoBlocks(main) {
     buildHeroBlock(main);
   } catch (error) {
     // eslint-disable-next-line no-console
-    console.error('Auto Blocking failed', error);
+    /* console.error('Auto Blocking failed', error); */
   }
 }
 

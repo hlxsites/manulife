@@ -140,6 +140,10 @@
   color: var(--color-white);
 }
 
+.facebook-chat .tile-container {
+  height: 110px;
+}
+
 .tile:hover .tile-container {
   cursor: auto;
   margin-top: -15px;
@@ -173,4 +177,73 @@
   margin: 0;
   transition: none;
   box-shadow: none;
+}
+
+/* Facebook chat section */
+.tiles.facebook-chat {
+  min-height: 110px;
+}
+
+.section.tiles-container.facebook-chat {
+  padding: 50px 0;
+}
+
+.facebook-chat .tiles-wrapper {
+  min-height: 110px;
+}
+
+.facebook-chat .tile,
+.facebook-chat .tile-body .tile-body-wrapper {
+  padding: 0;
+}
+
+.facebook-chat .tile-bg-white {
+  border: 1px solid var(--border-color);
+}
+
+.facebook-chat .tile-body {
+  padding: 0;
+  margin: 30px 0 0 30px;
+}
+
+.facebook-chat .tile-body-wrapper .icon {
+  font-size: 50px;
+  color: var(--icon-color-dark);
+  position: relative;
+  bottom: auto;
+  float: left;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child {
+  width: 85%;
+  font-weight: var(--font-weight-bolder);
+  line-height: 1.63;
+  color: var(--color-base-primary);
+  letter-spacing: normal;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  display: inline-block;
+  padding: 0 30px;
+  position: unset;
+}
+
+.facebook-chat .tile-body .tile-body-wrapper p:last-child::after {
+  position: relative;
+  font-family: var(--font-family-txticon);
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  content: "\e903";
+  color: var(--link-color-secondary);
+  font-size: 20px;
+  width: 28px;
+  height: 28px;
+  display: inline-block;
+  right: 0;
+  top: 2px;
+  float: right;
 }

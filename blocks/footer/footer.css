@@ -34,7 +34,7 @@
 .footer .foot-social > div {
   margin: 0 40px;
   gap: 0;
-  align-items: center;
+  align-items: left;
 }
 
 .footer .footer-links >div {
