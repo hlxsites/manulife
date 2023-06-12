@@ -17,8 +17,10 @@ function mobileNavClick(e) {
   const body = document.querySelector('body');
   if (body.classList.contains('is-open-menu')) {
     body.classList.remove('is-open-menu');
+    body.classList.add('is-close-menu');
   } else {
     body.classList.add('is-open-menu');
+    body.classList.remove('is-close-menu');
   }
 }
 

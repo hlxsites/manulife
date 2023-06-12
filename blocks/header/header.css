@@ -425,10 +425,9 @@ ul.sub-nav li:first-child:hover::before{
     overflow: hidden;
   }
 
-  .is-open-menu .nav-top-left {
-    transform: translate3d(0,0,0);
+  .is-open-menu .nav-top-left,
+  .is-close-menu .nav-top-left {
     visibility: visible;
-    transition: transform 1000ms ease,visibility 1000ms linear;
     display: block;
     z-index: 1003;
     margin-top: 60px;
@@ -437,11 +436,38 @@ ul.sub-nav li:first-child:hover::before{
     min-width: 320px;
     position: fixed;
     top: 0;
-    left: 0 !important;
     overflow-x: hidden;
     overflow-y: auto;
     padding-bottom: 60px;
     background-color: var(--color-white);
+  }
+
+  .is-open-menu .nav-top-left {
+    animation: mobile-navigation-open 1s ease-out backwards;
+  }
+
+  .is-close-menu .nav-top-left {
+    animation: mobile-navigation-close 1s ease-out forwards;
+  }
+
+  @keyframes mobile-navigation-open {
+    0% {
+      left: 100%;
+    }
+
+    100% {
+      left: 0;
+    }
+  }
+
+  @keyframes mobile-navigation-close {
+    0% {
+      left: 0;
+    }
+
+    100% {
+      left: 100%;
+    }
   }
 
   ul.primary-nav > li {
