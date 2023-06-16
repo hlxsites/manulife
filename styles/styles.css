@@ -540,10 +540,22 @@ main {
   padding: 0;
 }
 
-.section.form-container > div.default-content-wrappe h4 {
+.profile main .columns h3 {
+  font-size: 1rem;
+  font-weight: var(--font-weight-bolder);
+  line-height: 1.63;
+  color: var(--color-base-primary);
+  max-height: 52px;
+  overflow: hidden;
+  padding: 0;
+  margin: 20px 0 0;
+}
+
+.section.form-container > div.default-content-wrapper h3 {
   letter-spacing: 0;
   font-weight: 600;
   margin-bottom: 0;
+  font-size: 22px;
 }
 
 /* Extra large view port */
@@ -585,17 +597,6 @@ main {
   color: var(--color-base-primary);
   word-break: break-word;
   padding: 0;
-}
-
-.profile main .columns h3 {
-  font-size: 1rem;
-  font-weight: var(--font-weight-bolder);
-  line-height: 1.63;
-  color: var(--color-base-primary);
-  max-height: 52px;
-  overflow: hidden;
-  padding: 0;
-  margin: 20px 0 0;
 }
 
 @media (max-width: 768px) {

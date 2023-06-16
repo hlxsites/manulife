@@ -33,7 +33,7 @@ function mobileNav(header) {
   mobLogo.id = 'mob-nav-logo';
   mobLogo.className = 'icon icon-nav-logo';
   mobLogo.setAttribute('aria-label', 'Home');
-  mobLogo.href = '/';
+  mobLogo.href = 'https://www.manulife.com.ph/';
   mobNav.append(mobLogo);
 
   const manuLifeLogo = document.createElement('a');
@@ -78,7 +78,7 @@ function decorateNavigation(nav) {
   navLogo.id = 'nav-logo';
   navLogo.className = 'icon icon-nav-logo';
   navLogo.setAttribute('aria-label', 'Home');
-  navLogo.href = '/';
+  navLogo.href = 'https://www.manulife.com.ph/';
   nav.prepend(navLogo);
 
   const mainListContainer = nav.querySelector('.nav-top-left > ul');
